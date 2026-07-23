@@ -2,23 +2,27 @@
 
 <html lang="en-US">
 
+  <!-- head is not displayed in the web browser when the page is loaded-->
   <head>
-    <!-- head is not displayed in the web browser when the page is loaded-->
-
-    <!-- This charset should allow not only english, but other languages to be displayed properly-->
+    <!-- This charset allows not only english, but other languages to be displayed properly-->
     <meta charset="utf-8" />
 
     <!-- Adding a simple favcon (icon shown on the tab) currently stored in images folder-->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
 
     <!-- This title repsensents the overall HTML doc-->
     <title>My test page</title>
+
+    <!-- CSS and JS are also included in this section-->
+    <!-- <link rel="stylesheet" href="style.css" />-->
+    <!-- <script src="scripts.js" defer></script>-->
+
   </head>
 
   <body>
     <!-- Current page's title-->
     <h1>Simple HTML practice</h1>    
-    <p>Before delving into the unknown I decided to first take a few days to <strong>practice</strong></p>
+    <p>Before delving into the unknown I <em>decided</em> to first take a few days to <strong>practice</strong></p>
     
     <ul>
       <li><a href="https://www.youtube.com/watch?v=XFkzRNyygfk&list=RDXFkzRNyygfk&start_radio=1" target="_blank">This link opens a new tab to the song im listening to</a></li>
@@ -27,6 +31,9 @@
   
     <!-- Just checking that other non alphabetic characters can be properly displayed-->
     <p>Japanese example: ご飯が熱い。</p>
+
+    <!--Hyper link-->
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"> <img src="../images/Do-not.jpg" target="Avoid clicking this image at all cost" width="200"/></a>
   </body>
 
 </html>
