@@ -11,7 +11,7 @@
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
 
     <!-- This title repsensents the overall HTML doc-->
-    <title>My test page</title>
+    <title>HTML Learning</title>
 
     <!-- CSS and JS are also included in this section-->
     <!-- <link rel="stylesheet" href="style.css" />-->
@@ -45,7 +45,7 @@
     <p>The 1<sup>st</sup> element of the periodic table is Hydrogen and can be used to make H<sub>2</sub>O</p>
 
     <!--Hyper link-->
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"> <img src="../images/Do-not.jpg" target="Avoid clicking this image at all cost" width="200"/></a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"> <img src="../images/Do-not.jpg" alt="Avoid clicking this image at all cost" width="200"/></a>
 
     <br><br><br>
 
@@ -88,7 +88,7 @@
      <br><br>
 
      <h3>Forms</h3>
-     <!-- Get is unsafe use POST for secure information-->
+     <!-- Get displays values in URL, while POST stores them in request body-->
      <form action="output.php" method="GET">
       <div>
         <label for="uname">username:</label>
@@ -99,7 +99,7 @@
 
       <div>
         <label for="pass">password:</label>
-        <input type="text" id="pass" name="pass" placeholder="Password" minlength="8" required>
+        <input type="password" id="pass" name="pass" placeholder="Password" minlength="8" required>
       </div>
 
       <br>
@@ -125,9 +125,7 @@
      <!-- Embeds content from other sources (dangerous as others can pose as your website)
           commonly used for ads as it isolates the ad website from the rest of the page-->
      <h3>iframe</h3>
-     <iframe style="border: 0; width: 300px; height: 100px;" src="ad.html">
-
-
+     <iframe style="border: 0; width: 300px; height: 100px;" src="ad.html" title="ad example"></iframe>
 
     </body>
 
