@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Learning: Selectors</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+
+    <!-- Links styles.css to this HTML file-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1><abbr title="Cascading Style Sheets">CSS</abbr> <strong>Selectors</strong></h1>
+    
+    <!-- Not really recommended, instead have <style> or a separate CSS file
+        One point to notice is that it overwrites the CSS style-->
+    <p style="color:rgba(0, 26, 255, 0.783)">In line-style</p>
+    <p> Modified by CSS</style></p>
+
+    <ul>
+        <!-- classmod modifies members of this class independetly from li-->
+        <li class="classmod">Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+        <li class="classmod">Element 4</li>
+        <!-- Unique identifier, just use it once-->
+        <li id="specialElement">Element 5</li>
+    </ul>
+    
+</body>
+
+</html>

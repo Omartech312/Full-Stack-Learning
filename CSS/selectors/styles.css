@@ -1,0 +1,18 @@
+p {
+    color: brown;
+}
+
+/* Modfies li tags*/
+li {
+    color: rgb(97, 34, 50);
+}
+
+/* Modifie members of this class*/
+.classmod {
+    color: forestgreen;
+}
+
+/* Special identifier for a single element*/
+#specialElement {
+    color: blue;
+}

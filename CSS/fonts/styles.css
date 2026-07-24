@@ -1,0 +1,43 @@
+p {
+    /* browsers may change the tonality of color, so its better to use absolute colors*/
+    color: red;
+
+    /* changes font to new times roman ('' needed if font has spaces)
+    also some browsers may not have certain fonts, therefore having more may be a good idea*/
+    font-family: 'Times New Roman', sans-serif;
+
+    /* changes font size*/
+    font-size: 15px;
+
+    /* Font-weight is based on the font, fonts may have more or less weight ranges
+    in this case for example bold and bolder have the same thickness, but this may change with other fonts*/
+    font-weight:bolder;
+
+    /* makes text italic*/
+    font-style:italic;
+
+    /* changes text alignment of text to center*/
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+}
+
+main{
+    background-color: skyblue;
+}
+
+body{
+    background-color: black;
+}
