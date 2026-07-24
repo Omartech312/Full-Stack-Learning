@@ -17,11 +17,21 @@
     <!-- <link rel="stylesheet" href="style.css" />-->
     <!-- <script src="scripts.js" defer></script>-->
 
+    <!-- Meta tags-->
+    <meta name="description" content="First HTML to practice the foundations">
+    <meta name="keywords" content="HTML, practice, review">
+    <meta name="author" content="Omar R">
+
+    <!-- Scales website to any devices resoluation-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- refreshes website after X seconds:  <meta http-equiv="refresh" content="5"> -->
+
   </head>
 
   <body>
     <!-- Current page's title-->
-    <h1>Simple HTML practice</h1>    
+    <h1 style="color:rgba(110, 199, 228, 0.906)">Simple <abbr title="Hypertext Markup Language">HTML</abbr> practice</h1>    
     <p>Before delving into the unknown I <em>decided</em> to first take a few days to <strong>practice</strong></p>
     
     <ul>
@@ -32,8 +42,93 @@
     <!-- Just checking that other non alphabetic characters can be properly displayed-->
     <p>Japanese example: ご飯が熱い。</p>
 
+    <p>The 1<sup>st</sup> element of the periodic table is Hydrogen and can be used to make H<sub>2</sub>O</p>
+
     <!--Hyper link-->
     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"> <img src="../images/Do-not.jpg" target="Avoid clicking this image at all cost" width="200"/></a>
-  </body>
+
+    <br><br><br>
+
+    <!-- Simple table-->
+    <h3>Product Cost</h3>
+     <table bgcolor="black" width="50%">
+      <!-- Table rows-->
+      <tr bgcolor="grey">
+        <th>Eggs</th>
+        <th>Milk</th>
+        <th>Cheese</th>
+        <th>Cabbage</th>
+        <th>Tomato</th>
+      </tr>
+      <tr style="color: red" bgcolor="lightgrey" align="center">
+        <td>$5.99</td>
+        <td>$3.99</td>
+        <td>$9.99</td>
+        <td>$3.5</td>
+        <td>$4</td>
+      </tr>
+     </table>
+
+     <h3>Span & Div tags</h3>
+
+     <!--Div targets a division of the document-->
+     <div style="background: #c7c7c7;">
+      <p> 
+        <!-- Span adds markup to text or a portion of the doc-->
+        <span style="color:aquamarine">This is to get some practice with span tag and nothing more</span>, but not reach to this point
+      </p>
+      <p>Taking it a step forward we have div which aims for a group of tags instead of primarily one</p>
+     </div>
+    
+     <!-- Bottons are mostly used with JS to trigger an effect, I will delve into this in the JS module-->
+     <h3>Botton</h3>
+     <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">
+      <button style="background-color: #a1a1a1; color: skyblue; border-radius: 5px;">DO NOT CLICK ME</button>
+     </a>
+     <br><br>
+
+     <h3>Forms</h3>
+     <!-- Get is unsafe use POST for secure information-->
+     <form action="output.php" method="GET">
+      <div>
+        <label for="uname">username:</label>
+        <input type="text" id="uname" name="uname" placeholder="Peter75" required>
+        </div>
+
+      <br>
+
+      <div>
+        <label for="pass">password:</label>
+        <input type="text" id="pass" name="pass" placeholder="Password" minlength="8" required>
+      </div>
+
+      <br>
+
+      <div>
+        <label for="email">email:</label>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com">
+      </div>
+
+      <br>
+
+      <div>
+        <input type="reset">
+      </div>
+
+      <br>
+
+      <div>
+        <input type="submit">
+      </div>
+     </form>
+
+     <!-- Embeds content from other sources (dangerous as others can pose as your website)
+          commonly used for ads as it isolates the ad website from the rest of the page-->
+     <h3>iframe</h3>
+     <iframe style="border: 0; width: 300px; height: 100px;" src="ad.html">
+
+
+
+    </body>
 
 </html>
