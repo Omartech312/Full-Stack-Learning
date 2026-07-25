@@ -1,0 +1,91 @@
+/*Importing Roboto font from relative file path*/
+@font-face {
+    src: url(Roboto-Light.ttf);
+    font-family: Roboto-Light;
+}
+
+p {
+    /* changes font to new times roman ('' needed if font has spaces)
+    subsequent fonts act as a fallback*/
+    font-family: 'Times New Roman', sans-serif;
+
+    /* changes font size*/
+    font-size: 15px;
+
+    /* Font-weight is based on the font, fonts may have more or less weight ranges
+    in this case for example bold and bolder have the same thickness, but this may change with other fonts*/
+    font-weight:bolder;
+
+    /* makes text italic*/
+    font-style:italic;
+
+    /* changes text alignment of text to center*/
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: Roboto-Light;
+    /*adding x,y shadows to the header 1*/
+    text-shadow: 2.5px 3px 5px rgb(248, 67, 67), -2.5px -3px 5px rgb(112, 199, 234);
+}
+
+footer {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.829);
+    color: white;
+}
+
+#named {
+    color: tomato;
+}
+
+#rgb {
+    color: rgb(64, 235, 141);
+    font-family: monospace;
+}
+
+#hexa {
+    color: #59ff5f;
+    font-family: Arial;
+    font-weight: 100;
+}
+
+#hsl {
+    color: hsl(212, 100%, 67%);
+    /*External fonts (google)*/
+    font-family: "Playwrite NZ Guides", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.border {
+    /*
+    border-style:double;
+    border-width: 5px;
+    border-color: skyblue;
+    
+    */
+    border: 5px double skyblue;
+    border-radius: 50px;
+}
+
+.border2 {
+    border-bottom: 4px solid rgb(252,28,28);
+    border-top: 4px solid rgb(255,255,35);
+    border-left: 3px dotted rgb(255,179,37);
+    border-right: 3px dotted rgb(255,179,37);
+    border-radius: 10px;
+}
+
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    box-shadow: 3px 3px 5px grey;
+}

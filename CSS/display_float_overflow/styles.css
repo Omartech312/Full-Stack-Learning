@@ -1,0 +1,90 @@
+h1 {
+    text-align: center;
+    font-family: Roboto-Light;
+    /* adding x,y shadows to the header 1*/
+    text-shadow: 2.5px 3px 5px rgb(248, 67, 67), -2.5px -3px 5px rgb(112, 199, 234);
+}
+
+footer {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+
+body{
+    /* removes margin keeping content in direct contact with the edge of the browser*/
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.829);
+    color: white;
+}
+
+/* Margin practice*/
+.box {
+    border: 2px solid;
+    font-size: auto;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+#box1 {
+    background-color: rgb(255, 69, 69);
+    margin-left: auto;
+}
+
+#box2 {
+    background-color: rgb(97, 200, 240);
+    margin: auto;
+}
+
+/* Float property allows surrounding elements to flow around it*/
+#img1 {
+    float: right;
+    margin-left: 10px;
+}
+
+#img2 {
+    float:left;
+    margin-right: 20px;
+}
+
+#floatBox {
+    border: 5px double rgb(249, 206, 51);
+    margin-top: 10px;
+    /*extends until all elements inside are correctly enclosed*/
+    display: flow-root;
+    font-size: 20px;
+}
+
+#overflowBox {
+    border: 3px double rgb(28, 138, 211);
+    margin-top: 10px;
+    height: 80px;
+    font-size: 14px;
+    /* sets behavior of parent element when the content doesn't fit (hidden, visible, scroll, clip)*/
+    overflow: scroll;
+}
+
+/* By default block-level display takes up the whole width of the page, while in-line just takes the
+    necessary space, this can be modified through display: inline-block, block, none where none
+    completely removes the element from taking space, one possible combination can be perform with 
+    visibility: hidden where a tag may still be taking space, but be invisible on the page*/
+#displayDiv {
+    background-color: rgb(255, 96, 96);
+    height: 40px;
+}
+
+/* Here an in-line display is transfomed into block and then hidden, so that it takes the whole
+    space of a block, while remaining invisible*/
+#invisibleSpan {
+    height: 50px;
+    display: block;
+    visibility: hidden;
+}
+
+#displaySpan {
+    background-color: skyblue;
+    /*Height doesn't apply to in-line displays*/
+    height: 50px;
+}
