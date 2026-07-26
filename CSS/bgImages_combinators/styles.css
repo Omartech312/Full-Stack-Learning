@@ -1,0 +1,60 @@
+body {
+    /*Puts image as background based on URL*/
+    background-image: url(../images/background.jpg);
+
+    /*Sets the position of the image*/
+    background-position: center;
+
+    /*allows you to decide the behavior of the image  as the user scrolls through the website
+    whether it scrolls with the user or */
+    background-attachment:fixed;
+
+    /*removes repeatition*/
+
+    /*covers the whole screen with the image*/
+    background-size: cover;
+    color: white;
+
+    /* Personal notes: fixed + cover removes the need for repeatition*/
+}
+
+#Combinators {
+    border: 3px double skyblue;
+    padding: 2px;
+    color: black;
+}
+
+#container {
+    border: 3px solid rgb(248, 234, 87);
+    margin: 5px;
+}
+
+/*
+            = descendant
+        >   = child
+        ~   = general sibling
+        +   = adjacent sibling
+*/
+
+/* All <p> descendants of container will get a green color background (#1,2,3)*/
+#container p{
+    background-color: rgb(189, 241, 110);
+}
+
+/* All direct <p> children of container will get an orage background instead (#1,2)*/
+#container > p{
+    background-color: rgb(255, 185, 56);
+}
+
+/* All follwing <p> siblings of container will get an aquamarine background*/
+#container ~ p{
+    background-color: aquamarine;
+}
+
+/* The immediately following <p> sibling gets a dodgerblue background*/
+#container + p{
+    background-color: dodgerblue;
+}
+
+/* Important note: order matters, if I were to swap container p with container > p #1,2,3 
+would be rgb(189, 241, 110), same applies to container ~ p and container + p*/

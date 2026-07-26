@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Learning: Background Images, Combinators</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <h1><abbr title="Cascading Style Sheets">CSS:</abbr> <strong>Background Images, Combinators</strong></h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem inventore at maxime quis, amet cumque deleniti optio vero soluta, commodi totam voluptatum quod velit, tempora quidem qui autem nihil libero.</p>
+    
+        <!-- Combinators explain the relationship between listed selectors
+                = descendant
+            >   = child
+            ~   = general sibling
+            +   = adjacent sibling
+
+            selector > selector
+            div > p
+    -->
+    <h2>Combinators</h2>
+    <div id="Combinators">
+        <div id="container">
+            <!-- These are direct children of container, and so they overwrite
+            descendants if both are used-->
+            <p>This is #1</p>
+            <p>This is #2</p>
+            <div>
+                <!-- This is a descendant, (grandchild not child)-->
+                <p>This is #3</p>
+            </div>
+        </div>
+
+        <!-- These are general siblings of container, but only #4 is an adjacent sibling-->
+        <p>This is #4</p>
+        <p>This is #5</p>
+
+        <!-- This would be a sibling-->
+        <div>
+            <!-- This however would count as a nephew/niece preventing any change-->
+            <p style="color: white;">This is #6</p>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+
+</html>
