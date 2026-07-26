@@ -1,0 +1,64 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a{
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    display: inline-block;
+}
+/* In the pagination class gets a tags that have active as the class*/
+.pagination a.active {
+    background-color: rgb(136, 249, 92);
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: lightgray;
+    border-radius: 20px;
+}
+
+.Dropdown button {
+    background-color: rgb(89, 184, 252);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.Dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.Dropdown .content {
+    position: absolute;
+    background-color: rgb(174, 216, 246);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.478);
+    display: none;
+}
+
+.Dropdown:hover .content{
+    display: block;
+}
+
+.Dropdown:hover button{
+    background-color: aqua;
+}
+
+.Dropdown a:hover {
+    background: rgb(242, 244, 245);
+}
+
+.Dropdown{
+    display: inline;
+}

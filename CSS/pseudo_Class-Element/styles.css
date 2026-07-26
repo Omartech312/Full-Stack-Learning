@@ -1,0 +1,112 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Modifies buttons when you hover and click them*/
+button:hover {
+    font-size: 1.1em;
+    background-color: grey;
+}
+
+button:active {
+    font-size: 1.1em;
+    background-color: rgb(95, 232, 95);
+}
+
+/* Changes the color of the link to light blue*/
+a:link{
+    color: lightblue;
+}
+/* changes color and size when mouse is hover over the link*/
+a:hover {
+    color: rgb(61, 61, 251);
+    font-size: 1.2em;
+}
+/* changes color and keeps the previous size (hover) when clicking the link*/
+a:active {
+    color: red;
+    font-size: 1.2em;
+}
+/* after a link has beed visited the color changes to violet*/
+a:visited {
+    color: violet;
+}
+
+/* elements of this class that are not being hover over will remain this color*/
+li:not(:hover) {
+    background-color: rgb(103, 103, 101);
+}
+
+/* Highlights the N th element you may modify even to odd, (1-N), or create formulas like 2n+1
+this allows js to place a variable here to change based on that variable*/
+li:nth-child(5n) {
+    background-color: aquamarine;
+}
+
+li:hover {
+    background-color: aqua;
+    border-radius: 5px;
+}
+
+/*Allows you to hide tags until you hover*/
+#greeting p {
+    background-color: rgb(82, 82, 190);
+    padding: 15px;
+    display: none;
+}
+
+#greeting:hover p {
+    display: block;
+}
+
+/*Pseudo Elements*/
+
+/*This can be applied to classes, tags and ids*/
+
+/*Makes the first letter of h2 twice as big and italic*/
+#h2::first-letter {
+    font-size: 2em;
+    font-style: italic;
+}
+
+/* Makes the first line have a different background and text color*/
+#p::first-line {
+    background-color: rgb(149, 237, 211);
+    color: black;
+}
+
+/* makes the members of this id have a darkgrey backgorund and red text when selected*/
+#p::selection {
+    color: red;
+    background-color: darkgrey;
+}
+
+#fruit li::before {
+    content: "👍";
+}
+#apple::after {
+    content: "🍎";
+}
+#orange::after {
+    content: "🍊";
+}
+#grape::after {
+    content: "🍇";
+}
+
+#fruit li::marker {
+    content: "~";
+    color: yellow;
+    font-size: 1.2em;
+}
+
+/* These two seem similar to me the only real difference is that 
+class seems state oriented, for example, when X is hover then alter this
+while element selects an specific part of and performs a change like adding an emoji
+before or after
+
+maybe something simple like
+class: What condition/state
+element: What part
+*/

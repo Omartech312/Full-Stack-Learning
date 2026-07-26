@@ -12,9 +12,12 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
 
 - CSS 🚧
     - Selectors
-    - Fonts, shadows, and borders
-    - Display, float, and overflow
+    - Fonts, Shadows, and Borders
+    - Display, Float, and Overflow
     - Height, Width, and Positioning
+    - Background Images, and Combinators
+    - Pseudo Classes, and Pseudo Elements
+    - Pagination, Dropdown Menus, and Navigation Bars
 
 - JavaScript ⏳
 
