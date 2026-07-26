@@ -62,3 +62,35 @@ body {
 .Dropdown{
     display: inline;
 }
+
+h1{
+
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: azure;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar li{
+    float: left;
+}
+
+main {
+    margin: 20px;
+}
