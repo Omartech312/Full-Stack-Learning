@@ -1,0 +1,78 @@
+
+/*Applies to all elements*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.829);
+    color: white;
+}
+
+.box {
+    border: 2px double;
+    height: auto;
+    float: right;
+    padding: 25px;
+    text-align: center;
+    /* takes up to 50% of the screen horizontally and 75% Vertically*/
+    max-width: 50%;
+    max-height: 75%;
+    color: black;
+
+    /*Boxes take at least 48% of the space horizontally and 40% vertically*/
+    min-width: 48%;
+    min-height: 40%;
+    background-color: white;
+}
+
+.container {
+    background-color: grey;
+    /*Takes 100% of view point*/
+    height: 50vh;
+}
+
+.relative {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(76, 170, 251);
+    /*moves box 20 pixels down and 70 right to where it should be*/
+    position: relative;
+    top: -100px;
+    left: 100px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#fixed {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 132, 0);
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    font-size: auto;
+    text-align: center;
+}
+
+/*positions in relation to the parent (relative box in this case)*/
+#absolute {
+    width: 75px;
+    height: 50px;
+    background-color: rgb(139, 240, 152);
+    position: absolute;
+    font-size: 15px;
+    text-align: center;
+    top: 100px;
+    left: 50px;
+}
+
+#sticky {
+    height: 50px;
+    width: 50px;
+    background-color: lightcoral;
+    position: sticky;
+    top: 0px;
+    left: 50%;
+    text-align: center;
+}

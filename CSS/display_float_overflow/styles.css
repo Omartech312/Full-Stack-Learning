@@ -55,6 +55,10 @@ body{
     /*extends until all elements inside are correctly enclosed*/
     display: flow-root;
     font-size: 20px;
+
+    /* Simple testing for corner borders, which worked better than I expected*/
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 #overflowBox {
@@ -70,9 +74,13 @@ body{
     necessary space, this can be modified through display: inline-block, block, none where none
     completely removes the element from taking space, one possible combination can be perform with 
     visibility: hidden where a tag may still be taking space, but be invisible on the page*/
+
+/*Reversing block and inline + invisible experiment*/
 #displayDiv {
     background-color: rgb(255, 96, 96);
     height: 40px;
+    display: inline;
+
 }
 
 /* Here an in-line display is transfomed into block and then hidden, so that it takes the whole
@@ -87,4 +95,5 @@ body{
     background-color: skyblue;
     /*Height doesn't apply to in-line displays*/
     height: 50px;
+    display: block;
 }
