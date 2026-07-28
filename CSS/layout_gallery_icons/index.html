@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Learning: Image Gallery, Icons, and Website Layout</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome allows you to pull icons from their page using this-->
+    <script src="https://kit.fontawesome.com/9213192e29.js" crossorigin="anonymous"></script>   
+</head>
+
+<body>
+    <!-- Semantic tags help keep content organized. 
+        Better for SEO
+        Assist screen readers
+        
+        <header>  = introductory content
+        <nav>     = navigation bar, links
+        <main>    = main content (sections, aside, article, div)
+        <section> = dependent content
+        <aside>   = side content
+        <article> = independent content
+        <footer>  = closing content-->
+    <header>
+        <h1><abbr title="Cascading Style Sheets">CSS:</abbr> <strong>Image Gallery, Icons, and Website Layout</strong></h1>
+    </header>
+
+    <nav class="navbar">
+
+    </nav>
+
+    <main>
+        <aside>
+            <h3>This is aside</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat doloremque debitis veritatis eaque a! Magni repellat saepe et temporibus in voluptates tempore aut provident distinctio tenetur, nobis facilis consequuntur obcaecati!</p>
+        </aside>
+        <section>
+            <h3>This is a section</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto vel voluptatibus rerum sunt sed obcaecati consequuntur. Ipsam, quia? Inventore at, illum odit reprehenderit enim itaque officia tempora tempore dolor nobis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, porro suscipit. Quod quasi laudantium beatae magni labore explicabo, quos autem ipsa aperiam? Ex quod asperiores voluptatibus, deleniti facilis perspiciatis nisi!</p>
+        </section>
+
+        <article>
+            <h3>This is an article</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda maxime facilis enim officia modi quasi quaerat unde voluptates neque, similique quas eum ex in delectus earum tenetur sit numquam iure?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam ullam reprehenderit cumque dolore quis quam, labore excepturi ab commodi nesciunt a distinctio harum, similique tenetur alias voluptates pariatur iusto?</p>
+        </article>
+    </main>
+
+    <h2>Image Gallery</h2>
+
+    <div class="gallery">
+        <a target="_blank" href="../images/milk.jpg">
+            <img src="../images/milk.jpg" alt="image of milk">
+        </a>
+        <div class="description">Milk</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="../images/Cheese.jpg">
+            <img src="../images/Cheese.jpg" alt="image of cheese">
+        </a>
+        <div class="description">Cheese</div>
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="../images/eggs.png">
+            <img src="../images/eggs.png" alt="image of eggs">
+        </a>
+        <div class="description">Eggs</div>
+    </div>
+
+    <div class="icons">
+        <i class="fa-solid fa-seedling fa-5x"></i>
+        <a class="twitter" href="https://twitter.com">
+            <i class="fa-brands fa-x-twitter fa-5x"></i>
+        </a>
+        <a href="https://facebook.com">
+            <i class="fa-brands fa-square-facebook fa-5x"></i>
+        </a>
+    </div>
+    
+
+    <footer>
+        footer
+    </footer>
+</body>
+
+</html>

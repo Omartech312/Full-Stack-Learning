@@ -1,0 +1,81 @@
+.container{
+    display: flex;
+    /*By default flex-direction is row*/
+    /*flex-direction: row-reverse; reverses the numbers going from 1234 on the left
+    to 4321 on the right kind of like mirroring*/
+    
+    /* This is horizonatally
+    justify-content maintains the order, but allows you to chose whether it will be
+    left, right, center or space-between which will evenly distribute the content within the given space
+    space-around which includes the area aorund these elements
+    space-evenly takes it one step further and ensures there is equal spacing everywhere between these elements*/
+    /*justify-content: space-evenly;*/
+
+    border: 10px double black;
+    height: 90vh;
+
+    /* Now for vertical changes
+    align-items: flex-start default, flex-end moves to the end of the Y-axis
+    center: just centers elements.     baseline ensures the data within the elements
+    is aligned in case one takes less space than the others*/
+    
+    /*
+    flex-wrap: wrap: wraps if there is not enough space
+    flex-wrap: wrap-reverse;
+    Used along with flex-wrap
+    align-content: flex-start;
+
+    adds space in between the elements
+    column-gap: 2em;
+    row-gap: 2em;
+    */
+}
+
+
+.box {
+    width: 150px;
+    height: 150px;
+    font-size: 8em;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#box1 {
+    background-color: hsl(0, 94%, 63%);
+    /*
+    Its also possible to align a single element using this
+    align-self: center;
+    */
+}
+
+#box2 {
+    background-color: aquamarine;
+    /*
+    alters the order of the boxes
+    order: 1;
+    */
+}
+
+#box3 {
+    background-color: rgb(239, 193, 77);
+}
+
+#box4 {
+    background-color: rgb(100, 243, 124);
+}
+
+#box5 {
+    background-color: hsl(0, 100%, 80%);
+}
+
+#box6 {
+    background-color: rgb(152, 252, 219);
+}
+
+#box7 {
+    background-color: rgb(235, 205, 130);
+}
+
+#box8 {
+    background-color: rgb(157, 245, 172);
+}

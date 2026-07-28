@@ -1,0 +1,89 @@
+* {
+    /* Factors in padding when calculating space*/
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+header {
+    background-color: rgb(191, 189, 189);
+    text-align: center;
+    padding: 25px;
+}
+
+.navbar {
+    background-color: rgb(127, 127, 127);
+    height: 50px;
+}
+
+aside {
+    width: 20%;
+    float: left;
+    padding: 10px;
+}
+
+section {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+article {
+    width: 30%;
+    float: left;
+    padding: 10px;
+}
+
+footer {
+    background-color: lightgray;
+    text-align: center;
+    padding: 25px;
+    display: block;
+    clear: both;
+}
+
+/*Responsive CSS if the width of the device is
+under 600px aside section and article take 100% of the screen, to display
+them vertically instead of horizonally*/
+@media screen and (max-width:600px){
+    aside, section, article{
+        width: 100%;
+    }
+}
+
+.gallery {
+    display: inline-block;
+    border: 3px solid skyblue;
+    margin: 5px;
+    margin: 5px;  
+    width: 200px;  
+}
+
+.gallery .description{
+    padding: 10px;
+    text-align: center;
+}
+
+.gallery:hover{
+    border: 8px solid rgb(162, 213, 233)
+}
+
+.gallery img{
+    width: 100%;
+    height: auto;
+}
+
+.icons {
+    text-align: center;
+}
+
+
+.icons a{
+    text-decoration: none;
+}
+
+.twitter {
+    color: black;
+}
