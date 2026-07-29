@@ -50,11 +50,12 @@ body {
     container-type: size;
 
     border-radius: 15px;
+    border: 4px, solid white;
 }
 
 .box:hover{
     transform: scale(1.1);
-    opacity: .7;
+    opacity: .9;
 }
 
 .box span{
@@ -118,6 +119,11 @@ body {
     background-color: rgb(152, 252, 219);
 }
 
+#box6:hover {
+    animation-name: box6;
+    animation-duration: 3s;
+}
+
 #box7 {
     background-color: rgb(235, 205, 130);
     width: 85%;
@@ -129,8 +135,9 @@ body {
 
 #box5 img{
     position: absolute;
-    opacity: 1;
-    height: 350%;
+    opacity: 0;
+    height: 0px;
+    width: 0px;
     left: 94.5%;
 }
 
@@ -138,17 +145,55 @@ body {
     opacity: 1;
     animation-name: teleport;
     animation-duration: 1s;
+    height: 350%;
+    width: auto;
 }
 
-#tbox4{
-    height: 250px;
-    width: 250px;
-    border: 5px double black;
-    text-align: center;
-    font-size: 8em;
-    background-color: rgb(240, 105, 134);
+#box7:hover {
+    animation-name: box7;
+    animation-duration: 5s;
+}
 
-    transform: skewy(120deg) scale(.4) translate(150px, -650px);
+.container:has(#box8:hover) .box:not(#box8){
+    animation-name: box8;
+    animation-duration: 5s;
+}
+
+@keyframes box1 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes box2 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes box3 {
+    0%{ transform: translate(0);}
+    15%{ transform: translate(-20%,0%);}
+    30%{ transform: translate(0%,-20%);}
+    45%{ transform: translate(20%,0%);}
+    60%{ transform: translate(0%,20%);}
+    75%{ transform: translate(-20%,0%);}
+    90%{ transform: translate(0%,0%) scale(.5);}
+    100%{ transform: scale(1);}
+}
+
+@keyframes box4 {
+    0%{ transform: skewy(0deg);}
+    100%{ transform: skewy(180deg);}
 }
 
 @keyframes teleport{
@@ -189,39 +234,19 @@ body {
     }
 }
 
-@keyframes box1 {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+@keyframes box6 {
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
 }
 
-@keyframes box2 {
-    0%{
-        transform: scale(1);
-    }
-    50%{
-        transform: scale(2);
-    }
-    100%{
-        transform: scale(1);
-    }
+@keyframes box7 {
+    50%{transform: scaleX(25%);}
+    80%{transform: scaleX(15%);}
+    100%{transform: scaleX(100%);}
 }
 
-@keyframes box3 {
-    0%{ transform: translate(0);}
-    15%{ transform: translate(-20%,0%);}
-    30%{ transform: translate(0%,-20%);}
-    45%{ transform: translate(20%,0%);}
-    60%{ transform: translate(0%,20%);}
-    75%{ transform: translate(-20%,0%);}
-    90%{ transform: translate(0%,0%) scale(.5);}
-    100%{ transform: scale(1);}
-}
-
-@keyframes box4 {
-    0%{ transform: skewy(0deg);}
-    100%{ transform: skewy(180deg);}
+@keyframes box8 {
+    50%{opacity: 0;}
+    100%{opacity: 1;}
 }
