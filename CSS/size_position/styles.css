@@ -55,7 +55,8 @@ body {
     text-align: center;
 }
 
-/*positions in relation to the parent (relative box in this case)*/
+/*positions in relation to the parent (relative box in this case)
+    which in a sense removes it from the layout*/
 #absolute {
     width: 75px;
     height: 50px;

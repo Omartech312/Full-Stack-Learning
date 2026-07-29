@@ -18,6 +18,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
     - Background Images, and Combinators
     - Pseudo Classes, and Pseudo Elements
     - Pagination, Dropdown Menus, and Navigation Bars
+    - Flexbox, Transformations and Animations
 
 - JavaScript ⏳
 

@@ -1,3 +1,8 @@
+body {
+    background-color: black;
+    color: white;
+}
+
 .container{
     display: flex;
     /*By default flex-direction is row*/
@@ -10,34 +15,51 @@
     space-around which includes the area aorund these elements
     space-evenly takes it one step further and ensures there is equal spacing everywhere between these elements*/
     /*justify-content: space-evenly;*/
-
-    border: 10px double black;
-    height: 90vh;
+    justify-content: space-evenly;
+    border: 10px double white;
+    height: 100vh;
 
     /* Now for vertical changes
     align-items: flex-start default, flex-end moves to the end of the Y-axis
     center: just centers elements.     baseline ensures the data within the elements
     is aligned in case one takes less space than the others*/
-    
+    align-items: center;
     /*
     flex-wrap: wrap: wraps if there is not enough space
     flex-wrap: wrap-reverse;
     Used along with flex-wrap
     align-content: flex-start;
+    
 
     adds space in between the elements
     column-gap: 2em;
     row-gap: 2em;
     */
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 20px;
+    
 }
 
 
 .box {
-    width: 150px;
-    height: 150px;
-    font-size: 8em;
-    text-align: center;
+    width: 10%;
+    height: 15%;
+    display: grid;
+    place-items: center;
+    container-type: size;
+
     border-radius: 15px;
+}
+
+.box:hover{
+    transform: scale(1.1);
+    opacity: .7;
+}
+
+.box span{
+    font-size: 70cqmin;
+    line-height: 1;
 }
 
 #box1 {
@@ -46,6 +68,12 @@
     Its also possible to align a single element using this
     align-self: center;
     */
+    height: 40%;
+}
+
+#box1:hover {
+    animation-name: box1;
+    animation-duration: 1s;
 }
 
 #box2 {
@@ -56,16 +84,34 @@
     */
 }
 
+#box2:hover {
+    animation-name: box2;
+    animation-duration: 1s;
+}
+
 #box3 {
     background-color: rgb(239, 193, 77);
+    width: 20%;
+}
+
+#box3:hover{
+    animation-name: box3;
+    animation-duration: 2s;
 }
 
 #box4 {
     background-color: rgb(100, 243, 124);
+    height: 35%;
+}
+
+#box4:hover {
+    animation-name: box4;
+    animation-duration: 2s;
 }
 
 #box5 {
     background-color: hsl(0, 100%, 80%);
+    width: 50%;
 }
 
 #box6 {
@@ -74,8 +120,108 @@
 
 #box7 {
     background-color: rgb(235, 205, 130);
+    width: 85%;
 }
 
 #box8 {
     background-color: rgb(157, 245, 172);
+}
+
+#box5 img{
+    position: absolute;
+    opacity: 1;
+    height: 350%;
+    left: 94.5%;
+}
+
+#box5:hover img{
+    opacity: 1;
+    animation-name: teleport;
+    animation-duration: 1s;
+}
+
+#tbox4{
+    height: 250px;
+    width: 250px;
+    border: 5px double black;
+    text-align: center;
+    font-size: 8em;
+    background-color: rgb(240, 105, 134);
+
+    transform: skewy(120deg) scale(.4) translate(150px, -650px);
+}
+
+@keyframes teleport{
+    0% {
+        opacity: 0;
+        transform: translateX(-80px) scale(1.2);
+        filter: blur(12px) brightness(2);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateX(25px);
+        filter: blur(5px) brightness(2.5);
+    }
+
+    40% {
+        opacity: 0.3;
+        transform: translateX(-20px) scaleX(1.3);
+        filter: blur(8px) brightness(1.8);
+    }
+
+    60% {
+        opacity: 0;
+        transform: translateX(40px);
+        filter: blur(15px) brightness(3);
+    }
+
+    80% {
+        opacity: 0.5;
+        transform: translateX(-10px) scale(1.1);
+        filter: blur(3px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+        filter: blur(0) brightness(1);
+    }
+}
+
+@keyframes box1 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes box2 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes box3 {
+    0%{ transform: translate(0);}
+    15%{ transform: translate(-20%,0%);}
+    30%{ transform: translate(0%,-20%);}
+    45%{ transform: translate(20%,0%);}
+    60%{ transform: translate(0%,20%);}
+    75%{ transform: translate(-20%,0%);}
+    90%{ transform: translate(0%,0%) scale(.5);}
+    100%{ transform: scale(1);}
+}
+
+@keyframes box4 {
+    0%{ transform: skewy(0deg);}
+    100%{ transform: skewy(180deg);}
 }
