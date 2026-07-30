@@ -20,7 +20,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
     - Pagination, Dropdown Menus, and Navigation Bars
     - Flexbox, Transformations and Animations
 
-- JavaScript ⏳
+- JavaScript 🚧
 
 - TypeScript ⏳
 
