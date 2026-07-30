@@ -10,7 +10,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
 - HTML ✅
     - One HTML file covering document structure, metadata, text formatting, links, images, tables, lists, forms, buttons, divs, spans, and iframes.
 
-- CSS 🚧
+- CSS ✅
     - Selectors
     - Fonts, Shadows, and Borders
     - Display, Float, and Overflow
