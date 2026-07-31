@@ -14,3 +14,11 @@ h1{
 #variables p{
     margin: 3px;
 }
+
+#variables h2{
+    margin-bottom: 2px;
+}
+
+#welcome{
+    text-shadow: 2px 2px 2px skyblue, -2px -2px 2px rgb(233, 94, 94);
+}

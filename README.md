@@ -21,6 +21,12 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
     - Flexbox, Transformations and Animations
 
 - JavaScript 🚧
+    - JavaScript Basics
+        - Variables
+        - Arithmetic
+        - User Input
+        - Type Conversion
+        - Constants
 
 - TypeScript ⏳
 
