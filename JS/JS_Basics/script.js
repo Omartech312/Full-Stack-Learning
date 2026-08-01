@@ -55,9 +55,14 @@ console.log(`Your name is ${username}`);
 */
 let username;
 
+// when mySubmit button is clicked it calls a function
 document.getElementById("mySubmit").onclick = function(){
+
+    // the function sets username equal to the value of userInput
     username = document.getElementById("userInput").value;
+    // selects the welcome id and sets the text equal to Welcome along with the provided username
     document.getElementById("welcome").textContent = `Welcome ${username}`;
+
     console.log(username);
 }
 
@@ -65,15 +70,31 @@ document.getElementById("mySubmit").onclick = function(){
 //                   strings, numbers and booleans
 
 // This accepts a string data type, so by adding the 1 we essentially append 1 to the given string (example: 45 -> 451)
-let userAge = window.prompt("How old are you?");
+let userAge;
 
-//if you want to use it as a number you have to use Number(). (exaple 18->19)
+//When the typeSubmit button is clicked it calls this funciton
+document.getElementById("typeSubmit").onclick = function(){
+    //The function sets userAge equal to the number provided by the user
+    userAge = document.getElementById("numConversion").value;
+
+    document.getElementById("strOutput").textContent = `Before type conversion: ${userAge + 1}`;
+
+    document.getElementById("intOutput").textContent = `After type conversion: ${Number(userAge) + 1}`;
+
+    document.getElementById("explain").textContent = `The user input is initially taken as a string, so when adding one to a string we are essentially appending the one at the end. ${userAge}+1 -> ${userAge+1}.
+    \n However, if we first use Number(variable) this will cast the string to a number allowing numerical additions resulting in: ${Number(userAge) + 1}`
+
+
+
+}
+
+// if you want to use it as a number you have to use Number(). (exaple 18->19)
 userAge = Number(userAge);
 userAge += 1;
 
 console.log(userAge, typeof userAge);
 
-//Quick test
+// Quick test
 let x = "pizza";
 let y = "pizza";
 let z = 0;
@@ -90,4 +111,8 @@ console.log(y, typeof y);
 console.log(z, typeof z);
 
 // Constants = immutable variable =================================================================
+
+let pi = 3.14159;
+let radius;
+let circumference;
 
