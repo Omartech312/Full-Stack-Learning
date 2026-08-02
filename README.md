@@ -21,7 +21,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
     - Flexbox, Transformations and Animations
 
 - JavaScript 🚧
-    - JavaScript Basics
+    - Core Programming Foundations
         - Variables
         - Arithmetic
         - User Input

@@ -77,12 +77,13 @@ document.getElementById("typeSubmit").onclick = function(){
     //The function sets userAge equal to the number provided by the user
     userAge = document.getElementById("numConversion").value;
 
-    document.getElementById("strOutput").textContent = `Before type conversion: ${userAge + 1}`;
+    document.getElementById("strOutput").textContent = `Before type conversion (String + Number): ${userAge + 1}`;
 
-    document.getElementById("intOutput").textContent = `After type conversion: ${Number(userAge) + 1}`;
+    document.getElementById("strExplain").textContent = `The user input is initially stored as a string causing the + operator to perform concatenation rather than arithmetic addition.`
 
-    document.getElementById("explain").textContent = `The user input is initially taken as a string, so when adding one to a string we are essentially appending the one at the end. ${userAge}+1 -> ${userAge+1}.
-    \n However, if we first use Number(variable) this will cast the string to a number allowing numerical additions resulting in: ${Number(userAge) + 1}`
+    document.getElementById("intOutput").textContent = `After type conversion (Number + Number): ${Number(userAge) + 1}`;
+
+    document.getElementById("intExplain").textContent = `After using Number() both operands are numbers, so the + operator is able to perform numeric addition: ${Number(userAge)} + 1 = ${Number(userAge) + 1}`
 
 
 
@@ -112,7 +113,18 @@ console.log(z, typeof z);
 
 // Constants = immutable variable =================================================================
 
-let pi = 3.14159;
+// Once declare you cannot change the value of a constant (security measure to ensure the value always remains the same)
+const PI = 3.14159;
 let radius;
 let circumference;
+
+// Attempting to reassign will result in an error
+// PI = 25;
+
+document.getElementById("radButton").onclick = function() {
+    radius = document.getElementById("radInput").value;
+    radius = Number(radius);
+    circumference = 2 * PI * radius;
+    document.getElementById("radFinal").textContent = circumference;
+}
 

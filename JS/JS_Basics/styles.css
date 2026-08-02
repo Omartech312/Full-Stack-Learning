@@ -25,5 +25,9 @@ h2{
 }
 
 #welcome{
-    text-shadow: 2px 2px 5px rgb(0, 182, 254), -2px -2px 5px rgb(0, 182, 254);
+    text-shadow: 2px 2px 5px rgb(0, 182, 254), -2px -2px 5px rgb(255, 161, 107);
+}
+
+#radFinal{
+    text-shadow: 2px 2px 5px rgb(0, 182, 254), -2px -2px 5px rgb(255, 161, 107);
 }

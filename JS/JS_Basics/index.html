@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS: JavaScript Basics</title>
+    <title>JS: Core Programming Foundations</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="../../CSS/images/favicon.ico" type="image/x-icon">
     <!-- imports the javascript, but defer waits for HTML to load before pulling JS-->
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>JavaScript Basics</h1>
+    <h1>Core Programming Foundations</h1>
     <div id="variables">
         <h2>Variables</h2>
         <p id="p1"></p>
@@ -36,21 +36,27 @@
 
     <div>
         <h2>Type Conversion</h2>
-        <p>Please provide a number from 1 to 100. number 1 will be added to this value to show the difference between adding to a String and Number.</p>
+        <p>Please provide a number from 1 to 100. The number 1 will be added before and after converting input with Number() to show why values should be converted to the intended data type before performing arithmetic.</p>
         <label>Enter a number (1-100): </label>
         <input id="numConversion"><br><br>
         <button id="typeSubmit">submit</button><br>
 
         <h3 id="strOutput"></h3>
+        <p id="strExplain"></p>
         <h3 id="intOutput"></h3>
-        <h3 id="explain"></h3>
+        <p id="intExplain"></p>
+        
         <hr>
     </div>
 
 
     <div>
         <h2>Constants</h2>
-        <label></label>
+        <p>Calculating the circumference of a circle is the perfect scenario to use constants as π will remain the same value in most scenarios.</p>
+        <label>Enter the radius: </label>
+        <input id="radInput"><br><br>
+        <button id="radButton">submit</button>
+        <h3 id="radOutput">Using Formula 2πr your circumference is: <span id="radFinal"></span></h3>
     </div>
 
     <div style="position: fixed; right: 1vw; top: 0px;"><h3><a href="../../home.html"> Return To Homepage</a></h3></div>
