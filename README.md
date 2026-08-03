@@ -1,6 +1,8 @@
 # Full Stack Learning
 I will use this repository to document my journey reviewing core full-stack development concepts and learning new technologies. I will then apply these skills building a product store project.
 
+Please clone the repository and open home.html in the main folder for the most optimal navigation.
+
 ## Current Progress
 
 Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
