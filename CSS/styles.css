@@ -1,4 +1,4 @@
-body{
+body {
     background-image: url(images/homeBg.png);
     background-position: center;
     background-attachment:fixed;
@@ -7,16 +7,28 @@ body{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-header{
+header {
     text-align: center;
     width: 100%;
     min-height: 40vh;
 }
 
-header h1{
+header h1 {
     font-size: 400%;
     line-height: 1;
     margin-bottom: 5px;
+}
+
+h1 {
+    color: rgb(0, 182, 254);;
+}
+
+h2 {
+    color: rgb(96, 194, 233);
+}
+
+main {
+    margin-left: 1vw;
 }
 
 main h2 {
@@ -36,6 +48,18 @@ a:hover {
     text-shadow: 3px 3px 10px rgb(247, 127, 127), -3px -3px 10px skyblue;
 }
 
+a:active {
+    color: rgb(255, 255, 255);
+}
+
 a:visited {
     color: rgb(240, 137, 240);
+}
+
+ol > li {
+    font-size: 1.15em;
+}
+
+ul {
+    margin-top: 8px;
 }

@@ -3,28 +3,25 @@ body {
     color: white;
 }
 
-h1{
+h1 {
     text-align: center;
     color: rgb(0, 182, 254);
 }
 
-h2{
+h2 {
     color: rgb(96, 194, 233);
 }
 
-#variables {
+#variables p{
     white-space: pre-line;
 }
 
-#variables p{
-    margin: 3px;
-}
 
-#variables h2{
+#variables h2 {
     margin-bottom: 2px;
 }
 
-#welcome{
+#welcome {
     text-shadow: 2px 2px 5px rgb(0, 182, 254), -2px -2px 5px rgb(255, 161, 107);
 }
 

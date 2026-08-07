@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    color: rgb(0, 182, 254);
+    text-align: center;
+}
+
+h2 {
+    color: rgb(96, 194, 233);
+}
+
+#randomDiv{
+}
+
+#randomDiv input {
+    width: 50px;
+    border: 3px solid rgb(195, 77, 254);
+    border-radius: 7px;
+    margin-bottom: 5px;
+}
+
+#randomDiv button {
+    border-radius: 8px;
+}

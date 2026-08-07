@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of Programming in JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../../CSS/images/favicon.ico" type="image/x-icon" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Basics of Programming in JavaScript</h1>
+    
+    <h2>Random Numbers</h2>
+    <p>Generates a number between Min and Max. Please provide an upper and lower bounds</p>
+
+    <div id="randomDiv">
+        <button id="ranButton">Generate</button>
+        <input id="Min" type="number" required> -
+        <input id="Max" type="number" required>
+        <p id="ranOutput"></p>
+    </div>
+    <hr>
+    <h2>Case Handling</h2>
+    <p>Please provide a number 1-7 (inclusive) to determine the day of the week where 1 is Monday and 7 is Sunday.</p>
+    <label for="caseH"></label>
+    <input type="number" max="7" min="1" id="caseH" />
+    <button id="caseButton">Submit</button>
+
+
+    <h3>If Statements</h3>
+    <p>Normal if statement will be used to determine whether your day lands on a weekday or weekend.</p>
+    <h4 id="ifOutput"></h4>
+
+    <h3>Ternary Operators</h3>
+    <p>Same as above, but now using an ternary operator</p>
+    <h4 id="terOutput"></h4>
+
+    <h3>Switch</h3>
+    <p>A switch will be used to determine the exact day based on the provided number</p>
+    <h4 id="swiOutput"></h4>
+
+
+
+
+    <div style="position: fixed; right: 1vw; top: 0px;"><h3><a href="../../home.html"> Return To Homepage</a></h3></div>
+</body>
+</html>

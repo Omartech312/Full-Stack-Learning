@@ -114,7 +114,11 @@ console.log(z, typeof z);
 // Constants = immutable variable =================================================================
 
 // Once declare you cannot change the value of a constant (security measure to ensure the value always remains the same)
-const PI = 3.14159;
+
+// Math = built-in object that provides a collection of properties and methods such as:
+// Math.round, floor, ceil, trunc, pow, sqrt, long, sin, con, tan, abs, sign, min, max
+
+const PI = Math.PI;
 let radius;
 let circumference;
 

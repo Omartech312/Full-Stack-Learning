@@ -11,6 +11,7 @@
 </head>
 <body>
     <h1>Core Programming Foundations</h1>
+
     <div id="variables">
         <h2>Variables</h2>
         <p id="p1"></p>
@@ -27,7 +28,7 @@
 
     <div>
         <h2>Accepting user input in JS</h2>
-        <label>Enter your username: </label>
+        <label for="userInput">Enter your username: </label>
         <input id="userInput"><br><br>
         <button id="mySubmit">submit</button><br>
         <h3 id="welcome"></h3>
@@ -37,7 +38,7 @@
     <div>
         <h2>Type Conversion</h2>
         <p>Please provide a number from 1 to 100. The number 1 will be added before and after converting input with Number() to show why values should be converted to the intended data type before performing arithmetic.</p>
-        <label>Enter a number (1-100): </label>
+        <label for="numConversion">Enter a number (1-100): </label>
         <input id="numConversion"><br><br>
         <button id="typeSubmit">submit</button><br>
 
@@ -53,7 +54,7 @@
     <div>
         <h2>Constants</h2>
         <p>Calculating the circumference of a circle is the perfect scenario to use constants as π will remain the same value in most scenarios.</p>
-        <label>Enter the radius: </label>
+        <label for="radInput">Enter the radius: </label>
         <input id="radInput"><br><br>
         <button id="radButton">submit</button>
         <h3 id="radOutput">Using Formula 2πr your circumference is: <span id="radFinal"></span></h3>

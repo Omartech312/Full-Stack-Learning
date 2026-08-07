@@ -23,12 +23,15 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
     - Flexbox, Transformations and Animations
 
 - JavaScript 🚧
-    - Core Programming Foundations
-        - Variables
-        - Arithmetic
-        - User Input
-        - Type Conversion
-        - Constants
+    - Programming Fundamentals
+        - Data Types and Operators
+            - Variables
+            - Arithmetic
+            - User Input
+            - Type Conversion
+            - Constants
+        - Basics of Programming in JavaScript
+    - Advance Javascript
 
 - TypeScript ⏳
 
