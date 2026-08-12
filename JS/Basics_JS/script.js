@@ -56,8 +56,18 @@ document.getElementById("caseButton").onclick = function(){
             break;
         default:
             output.textContent = "Sunday";
+    }   
+}
+
+// String handling
+document.getElementById("strButton").onclick = function(){
+    const name = document.getElementById("nameInput").value;
+
+    if(!name.includes(' ')){
+        document.getElementById("strOutput").textContent = `Please write both your first name and last name: ${name}, ${name.indexOf(' ')}`;
     }
-
-
+    else{
+        document.getElementById("strOutput").textContent = `Your First Name is ${name.slice(0, name.indexOf(' '))}, Your Last Name is ${name.slice(name.indexOf(' '), name.length)}, and finally your initials are ${name.charAt(0)}.${name.charAt(name.indexOf(' ') + 1)}.`
+    }
 }
 

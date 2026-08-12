@@ -30,7 +30,10 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - User Input
             - Type Conversion
             - Constants
-        - Basics of Programming in JavaScript
+        - Basics of programming
+            - Random Numbers
+            - Case Handling
+            - String Handling
     - Advance Javascript
 
 - TypeScript ⏳
