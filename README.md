@@ -33,7 +33,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
         - Basics of programming
             - Random Numbers
             - Case Handling
-            - String Handling
+            - String Manipulation
     - Advance Javascript
 
 - TypeScript ⏳

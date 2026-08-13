@@ -21,17 +21,44 @@ rand.onclick = function(){
 document.getElementById("caseButton").onclick = function(){
     let day = Number(document.getElementById("caseH").value);
     // if statement logic:
-    if(day <= 5)
+    let ifOutput = "";
+
+    if(day == 1)
     {
-        document.getElementById("ifOutput").textContent =  "Weekday";
+        ifOutput =  "Monday";
+    }
+    else if(day == 2)
+    {
+        ifOutput = "Tuesday"; 
+    }
+    else if(day == 3)
+    {
+        ifOutput = "Wednesday";
+    }
+    else if(day == 4)
+    {
+        ifOutput = "Thursdays";
+    }
+    else if(day == 5)
+    {
+        ifOutput = "Friday";
+    }
+    else if(day == 6)
+    {
+        ifOutput = "Saturday";
+    }
+    else if(day == 7)
+    {
+        ifOutput = "Sunday";
     }
     else
     {
-        document.getElementById("ifOutput").textContent =  "Weekend";
+        ifOutput = "Invalid Number"
     }
+    document.getElementById("ifOutput").textContent = ifOutput;
 
     // Ternary Operator logic:
-    document.getElementById("terOutput").textContent = (day <= 5) ? "Weekday" : "Weekend";
+    document.getElementById("terOutput").textContent = (day <= 7 && day >= 1) ? ((day <= 5) ? "Weekday" : "Weekend") : "Invalid Number";
 
     let output = document.getElementById("swiOutput");
     switch(day)
@@ -54,8 +81,11 @@ document.getElementById("caseButton").onclick = function(){
         case 6:
             output.textContent = "Saturday";
             break;
-        default:
+        case 7:
             output.textContent = "Sunday";
+            break;
+        default:
+            output.textContent = "Invalid Number";
     }   
 }
 
@@ -67,7 +97,7 @@ document.getElementById("strButton").onclick = function(){
         document.getElementById("strOutput").textContent = `Please write both your first name and last name: ${name}, ${name.indexOf(' ')}`;
     }
     else{
-        document.getElementById("strOutput").textContent = `Your First Name is ${name.slice(0, name.indexOf(' '))}, Your Last Name is ${name.slice(name.indexOf(' '), name.length)}, and finally your initials are ${name.charAt(0)}.${name.charAt(name.indexOf(' ') + 1)}.`
+        document.getElementById("strOutput").textContent = `Your First Name is ${name.slice(0, name.indexOf(' '))},\n Your Last Name is ${name.slice(name.indexOf(' '), name.length)}, and finally your initials are ${name.charAt(0)}.${name.charAt(name.indexOf(' ') + 1)}.`
     }
 }
 
