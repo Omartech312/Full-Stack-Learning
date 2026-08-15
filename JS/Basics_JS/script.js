@@ -133,3 +133,22 @@ document.getElementById("guessButton").onclick = function(){
     tries--;
 }
 
+// Temperature conversion
+
+const tempInput = document.getElementById("tempInput");
+const toFarh = document.getElementById("toFar");
+const toCel = document.getElementById("toCel");
+const tempOut = document.getElementById("conResult");
+
+function conversion(){
+    
+    if(toFarh.checked){
+        tempOut.textContent = `${((Number(tempInput.value)*(9.0/5.0))+32).toFixed(1)}°F`;
+    }
+    else if(toCel.checked){
+        tempOut.textContent = `${(Number(tempInput.value)-32)*(5.0/9.0).toFixed(1)}°C`;
+    }
+    else{
+        tempOut.textContent = "Please select a unit";
+    }
+}

@@ -56,11 +56,27 @@
     <h2>Guessing Game</h2>
     <p>Try to guess a number between 1-100 in 6 turns.</p>
     <label for="guess">Your guess:</label>
-    <input id="guess" type="number" min="1" max="100" />
+    <input id="guess" type="number" min="1" max="100" placeholder="10"/>
     <br><br>
     <button id="guessButton">Submit</button>
     <button id="guessRestart">Restart</button>
     <p class="output" id="guessOutput"></p>
+
+    <hr>
+
+    <form>
+        <h2>Temperature Conversion</h2>
+        <input type="number" id="tempInput" placeholder="0"><br>
+
+        <input type="radio" id="toFar" name="unit">
+        <label for="toFar">Celsius → Fahrenheit</label><br>
+
+        <input type="radio" id="toCel" name="unit">
+        <label for="toCel">Fahrenheit → Celsius</label><br>
+
+        <button type="button" onclick="conversion()">Submit</button>
+        <p id="conResult"></p>
+    </form>
 
 
 
