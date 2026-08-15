@@ -97,7 +97,39 @@ document.getElementById("strButton").onclick = function(){
         document.getElementById("strOutput").textContent = `Please write both your first name and last name: ${name}, ${name.indexOf(' ')}`;
     }
     else{
-        document.getElementById("strOutput").textContent = `Your First Name is ${name.slice(0, name.indexOf(' '))},\n Your Last Name is ${name.slice(name.indexOf(' '), name.length)}, and finally your initials are ${name.charAt(0)}.${name.charAt(name.indexOf(' ') + 1)}.`
+        document.getElementById("strOutput").textContent = `Your Last Name is ${name.slice(name.indexOf(' '), name.length)}, Your First Name is ${name.slice(0, name.indexOf(' '))}, and finally your initials are ${name.charAt(0)}.${name.charAt(name.indexOf(' ') + 1)}.`
     }
+}
+
+let guessNum = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+let guessOut = document.getElementById("guessOutput");
+let tries = 5;
+
+document.getElementById("guessRestart").onclick = function(){
+    guessNum = Math.floor(Math.random() * (100 - 1 + 1) + 1);
+    guessOut.textContent = "";
+    tries = 5;
+
+}
+
+document.getElementById("guessButton").onclick = function(){
+    let guess = Number(document.getElementById("guess").value);
+
+    if(tries > 0){
+        if(guess > guessNum){
+            guessOut.textContent = `Your Guess is too High, you have ${tries} more guesses.`;
+        }
+        else if(guess < guessNum){
+            guessOut.textContent = `Your guess is too Low, you have ${tries} more guesses.`;
+        }
+        else{
+            guessOut.textContent = "You Won!";
+        }
+    }
+    else{
+        guessOut.textContent = "You Lost"
+    }
+
+    tries--;
 }
 
