@@ -34,6 +34,8 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Random Numbers
             - Case Handling
             - String Manipulation
+            - Guessing Game ← exercise
+            - Temperature Conversion ← exercise
     - Advance Javascript
 
 - TypeScript ⏳
