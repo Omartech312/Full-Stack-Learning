@@ -20,17 +20,17 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
     - Background Images, and Combinators
     - Pseudo Classes, and Pseudo Elements
     - Pagination, Dropdown Menus, and Navigation Bars
-    - Flexbox, Transformations and Animations
+    - Flexbox, Transformations and Animations (Interactive module)
 
 - JavaScript 🚧
     - Programming Fundamentals
-        - Data Types and Operators
+        - Data Types and Operators (Mostly Interactive module)
             - Variables
             - Arithmetic
             - User Input
             - Type Conversion
             - Constants
-        - Basics of programming
+        - Basics of programming (Interactive module)
             - Random Numbers
             - Case Handling
             - String Manipulation

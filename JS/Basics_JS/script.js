@@ -152,3 +152,28 @@ function conversion(){
         tempOut.textContent = "Please select a unit";
     }
 }
+
+let firstTx = document.getElementById("FirstTxt");
+let secondTx = document.getElementById("SecondTxt");
+
+// callback = a function that is passed as an argument to another function
+function callback(call){
+    call();
+    writeSecond();
+}
+
+function nocallback(){
+    writeFirst();
+    writeSecond();
+}
+
+function writeFirst(){
+    setTimeout(function() {
+        firstTx.textContent = "This should appear First. ";
+    }, 3000);
+}
+
+function writeSecond(){
+    secondTx.textContent = "Followed by this";
+}
+
