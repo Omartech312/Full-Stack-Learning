@@ -153,27 +153,35 @@ function conversion(){
     }
 }
 
-let firstTx = document.getElementById("FirstTxt");
-let secondTx = document.getElementById("SecondTxt");
+let callOut = document.getElementById("callOutput");
 
 // callback = a function that is passed as an argument to another function
-function callback(call){
-    call();
-    writeSecond();
+function callback(){
+    // Removes the current text to show the interaction difference.
+    callOut.textContent = "";
+
+    writeFirst(writeSecond);
 }
 
 function nocallback(){
+    callOut.textContent = "";
+
     writeFirst();
     writeSecond();
 }
 
-function writeFirst(){
+function writeFirst(callFun){
     setTimeout(function() {
-        firstTx.textContent = "This should appear First. ";
-    }, 3000);
+        callOutput.textContent += "This should appear First. ";
+
+        if(callFun){ 
+            callFun();
+        }
+
+    }, 1500);
 }
 
 function writeSecond(){
-    secondTx.textContent = "Followed by this";
+    callOut.textContent += "Followed by this";
 }
 
