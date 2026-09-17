@@ -182,6 +182,6 @@ function writeFirst(callFun){
 }
 
 function writeSecond(){
-    callOut.textContent += "Followed by this";
+    callOut.textContent += "Followed by this. ";
 }
 
