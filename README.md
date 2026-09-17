@@ -36,6 +36,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - String Manipulation
             - Guessing Game ← exercise
             - Temperature Conversion ← exercise
+            - Callback
     - Advance Javascript
 
 - TypeScript ⏳
