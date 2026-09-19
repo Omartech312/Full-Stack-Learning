@@ -78,6 +78,16 @@ function forea(){
         }
         console.log(even);
 
+        // reduce() method section
+        let redOut = document.getElementById("reduceOut");
+
+        let product = array.reduce(function(accumulator, currentValue){
+            return accumulator + currentValue;
+        })
+
+        redOut.innerHTML = product;
+
+
     }
     else{
         document.getElementById("eaOut").textContent = "Please Provide 3 valid Numbers";
