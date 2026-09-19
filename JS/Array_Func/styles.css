@@ -11,3 +11,8 @@ h1 {
 h2 {
     color: rgb(96, 194, 233);
 }
+
+.output{
+    font-size: 1.3em;
+    text-shadow: 2px 2px 5px skyblue, -2px -2px 5px skyblue;
+}
