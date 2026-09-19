@@ -16,3 +16,8 @@ h2 {
     font-size: 1.3em;
     text-shadow: 2px 2px 5px skyblue, -2px -2px 5px skyblue;
 }
+
+.subsections {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
