@@ -37,7 +37,26 @@ function forea(){
 
     if(num1 && num2 && num3){
         let array = [num1, num2, num3];
-        console.log(array);
+        //console.log(array);
+
+        // forEach() method section
+        let eaOut = document.getElementById("eaOut");
+        
+        array.forEach(function(number){
+            eaOut.innerHTML += `${number*2}<br>`;
+        })
+
+        // map() method section
+        let mapOut = document.getElementById("mapOut");
+        let squared = array.map(function(number){
+            return number * number;
+        })
+
+        for(let i = 0; i < squared.length; i++){
+            mapOut.innerHTML += `${squared[i]}<br>`;
+        }
+
+        console.log(squared);
     }
     else{
         document.getElementById("eaOut").textContent = "Please Provide 3 valid Numbers";
