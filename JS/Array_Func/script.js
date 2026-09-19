@@ -29,6 +29,12 @@ function display(u1, u2, u3){
     document.getElementById("spreadOut").innerHTML =  `User1: ${u1} <br>User2: ${u2}<br>User3: ${u3}`;
 }
 
+// clearing Rest/Spread
+function RestClear(){
+    document.getElementById("spreadOut").innerHTML = "";
+}
+
+
 function forea(){
     // clears previous text from the website when new one is submit
     document.getElementById("eaOut").textContent = "";
@@ -93,4 +99,11 @@ function forea(){
         document.getElementById("eaOut").textContent = "Please Provide 3 valid Numbers";
     }
 
+}
+
+function methodClear(){
+    document.getElementById("reduceOut").innerHTML = "";
+    document.getElementById("eaOut").innerHTML = "";
+    document.getElementById("mapOut").innerHTML = "";
+    document.getElementById("filterOut").innerHTML = "";
 }
