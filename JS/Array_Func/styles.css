@@ -12,12 +12,13 @@ h2 {
     color: rgb(96, 194, 233);
 }
 
-.output{
+.output {
     font-size: 1.3em;
-    text-shadow: 2px 2px 5px skyblue, -2px -2px 5px skyblue;
+    text-shadow: 2px 2px 8px skyblue, -2px -2px 8px skyblue;
 }
 
-.subsections {
-    margin-top: 2px;
-    margin-bottom: 2px;
+.subSec {
+    color: rgb(151, 228, 202);
+    font-size: larger;
+    margin-left: 5px;
 }

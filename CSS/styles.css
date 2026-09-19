@@ -68,9 +68,13 @@ ul {
     color: rgb(148, 204, 227);
 }
 
-.subsections {
+.subsubsections {
     margin-top: 7px;
     margin-bottom: 3px;
     color: rgb(151, 228, 202);
     font-size: large;
+}
+
+.subsections {
+    margin-left: 5px;
 }

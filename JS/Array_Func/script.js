@@ -29,8 +29,18 @@ function display(u1, u2, u3){
     document.getElementById("spreadOut").innerHTML =  `User1: ${u1} <br>User2: ${u2}<br>User3: ${u3}`;
 }
 
-function each(){
-    let num1 = document.getElementById("num1").value;
-    let num2 = document.getElementById("num2").value;
+function forea(){
+    document.getElementById("eaOut").textContent = "";
+    let num1 = Number(document.getElementById("each1").value);
+    let num2 = Number(document.getElementById("each2").value);
+    let num3 = Number(document.getElementById("each3").value);
+
+    if(num1 && num2 && num3){
+        let array = [num1, num2, num3];
+        console.log(array);
+    }
+    else{
+        document.getElementById("eaOut").textContent = "Please Provide 3 valid Numbers";
+    }
 
 }
