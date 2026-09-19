@@ -13,12 +13,17 @@ h2 {
 }
 
 .output {
-    font-size: 1.3em;
-    text-shadow: 2px 2px 8px skyblue, -2px -2px 8px skyblue;
+    font-size: 1.1em;
+    text-shadow: 2px 2px 10px skyblue, -2px -2px 10px skyblue;
+    margin-top: 4px;
+    margin-bottom: 5px;
+    margin-left: 3px;
 }
 
 .subSec {
     color: rgb(96, 255, 199);
-    font-size: larger;
-    margin-left: 5px;
+    font-size: 1.175em;
+    margin-left: 3px;
+    margin-top: 20px;
+    margin-bottom: 3px;
 }
