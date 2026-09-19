@@ -30,7 +30,12 @@ function display(u1, u2, u3){
 }
 
 function forea(){
+    // clears previous text from the website when new one is submit
     document.getElementById("eaOut").textContent = "";
+    document.getElementById("mapOut").textContent = "";
+    document.getElementById("filterOut").textContent = "";
+    document.getElementById("reduceOut").textContent = "";
+
     let num1 = Number(document.getElementById("each1").value);
     let num2 = Number(document.getElementById("each2").value);
     let num3 = Number(document.getElementById("each3").value);
@@ -55,8 +60,24 @@ function forea(){
         for(let i = 0; i < squared.length; i++){
             mapOut.innerHTML += `${squared[i]}<br>`;
         }
+        
+        // filter() method section
+        let filOut = document.getElementById("filterOut");
+        filOut.innerHTML = "Your even Inputs are: "
 
-        console.log(squared);
+        // Creates another array with elements that fullfil certain standards
+        let even = array.filter(function(number){
+            return number % 2 === 0;
+        })
+
+        for(let i = 0; i < even.length; i++){
+            filOut.innerHTML += `${even[i]}`;
+            if(Number(i) != Number(length - 1)){
+                filOut.innerHTML += ', ';
+            }
+        }
+        console.log(even);
+
     }
     else{
         document.getElementById("eaOut").textContent = "Please Provide 3 valid Numbers";
