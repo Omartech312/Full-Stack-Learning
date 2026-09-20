@@ -44,6 +44,9 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - map()
             - filter()
             - reduce()
+        - Functions, Objects and Classes
+            - Function Expression
+            - Arrow Functions
     - Advance Javascript
 
 - TypeScript ⏳
