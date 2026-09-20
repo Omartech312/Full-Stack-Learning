@@ -38,6 +38,12 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Temperature Conversion ← exercise
             - Callback
         - Rest & Spread Operators and Array Methods
+            - Rest
+            - Spread
+            - forEach()
+            - map()
+            - filter()
+            - reduce()
     - Advance Javascript
 
 - TypeScript ⏳
