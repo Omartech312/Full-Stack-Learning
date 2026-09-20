@@ -27,3 +27,17 @@ h2 {
     margin-top: 20px;
     margin-bottom: 3px;
 }
+
+input {
+    background-color: rgb(46, 46, 46);
+    border-radius: 5px;
+    border-color: white;
+    color: white;
+    text-align: center;
+}
+
+button { 
+    background-color: rgb(193, 233, 248);
+    border-radius: 4px;
+    border-color: white;
+}
