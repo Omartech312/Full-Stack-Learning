@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    color: rgb(0, 182, 254);
+    text-align: center;
+}
+
+h2 {
+    color: rgb(96, 194, 233);
+}
+
+.output {
+    font-size: 1.1em;
+    text-shadow: 2px 2px 10px skyblue, -2px -2px 10px skyblue;
+    margin-top: 4px;
+    margin-bottom: 5px;
+    margin-left: 3px;
+}

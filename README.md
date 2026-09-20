@@ -37,7 +37,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Guessing Game ← exercise
             - Temperature Conversion ← exercise
             - Callback
-        - Rest & Spread Operators and Array Methods
+        - Rest & Spread Syntax and Array Methods
             - Rest
             - Spread
             - forEach()

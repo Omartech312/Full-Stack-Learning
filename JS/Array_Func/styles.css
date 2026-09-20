@@ -21,7 +21,7 @@ h2 {
 }
 
 .subSec {
-    color: rgb(96, 255, 199);
+    color: rgb(141, 208, 184);
     font-size: 1.175em;
     margin-left: 3px;
     margin-top: 20px;
@@ -37,7 +37,7 @@ input {
 }
 
 button { 
-    background-color: rgb(193, 233, 248);
+    background-color: rgb(108, 192, 220);
     border-radius: 4px;
     border-color: white;
 }
