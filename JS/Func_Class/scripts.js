@@ -50,3 +50,19 @@ document.getElementById("Iage").addEventListener("click", learner.askAge);
 
 document.getElementById("hgreet").addEventListener("click", hero.greeting);
 hero.secret();
+
+// Constructor for a car
+
+function Car(model, make, year, color){
+    this.make = make,
+    this.model = model,
+    this.year = year,
+    this.color = color
+}
+
+const car = new Car("Fiesta", "Ford", 2016, "Grey");
+const neibCar = new Car("Fiesta", "Ford", 2019, "Silver");
+
+console.log(car)
+document.getElementById("consOut").textContent = `My Grandparents have a ${car.color} ${car.make} ${car.model} from ${car.year}`;
+document.getElementById("constOut").innerHTML = `<br>Jealous by this, their neighbors bought a ${neibCar.color} ${neibCar.make} ${neibCar.model} from ${neibCar.year}`
