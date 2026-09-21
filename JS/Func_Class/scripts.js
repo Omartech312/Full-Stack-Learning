@@ -10,6 +10,7 @@ function expression(){
     let arr = ["Majin Boo", "Son Gohan", "Son Goku"];
     let expOut = document.getElementById("funcExp");
 
+                // This is the function expression
     arr.forEach(function(character, index, array){
         expOut.innerHTML += `${index+1}: ${character}<br>`;
     });
@@ -17,7 +18,7 @@ function expression(){
 expression();
 
 
-let print = () => console.log("test");
-
 //arrow functions are a concise way to write function expressions. A good fit for simple functions
 // that are only used once (parameters) => some logic
+let print = () => document.getElementById("arrOutput").textContent = "This text was printed using an arrow function";
+print();
