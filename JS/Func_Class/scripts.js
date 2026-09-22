@@ -52,7 +52,7 @@ document.getElementById("hgreet").addEventListener("click", hero.greeting);
 hero.secret();
 
 // Constructor for a car
-
+// Constructors are neat for reusability, and are very similar to structures in both purpose and use.
 function Car(model, make, year, color){
     this.make = make,
     this.model = model,
@@ -63,6 +63,39 @@ function Car(model, make, year, color){
 const car = new Car("Fiesta", "Ford", 2016, "Grey");
 const neibCar = new Car("Fiesta", "Ford", 2019, "Silver");
 
-console.log(car)
+//console.log(car)
 document.getElementById("consOut").textContent = `My Grandparents have a ${car.color} ${car.make} ${car.model} from ${car.year}`;
-document.getElementById("constOut").innerHTML = `<br>Jealous by this, their neighbors bought a ${neibCar.color} ${neibCar.make} ${neibCar.model} from ${neibCar.year}`
+document.getElementById("constOut").innerHTML = `<br>Jealous by this, their neighbors bought a ${neibCar.color} ${neibCar.make} ${neibCar.model} from ${neibCar.year} <br>`;
+
+// Classes provide a claner way to organize a constructor
+
+class Product{
+    constructor(name, price, quantity, metric){
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.metric = metric;
+    }
+    displayProduct(){
+        return `${this.quantity} ${this.metric} of ${this.name} for ${this.price}`;
+    }
+}
+
+const eggs = new Product("egg", 5.99, 12, "units");
+const milk = new Product("milk", 7.99, 1, "gallon");
+const ramen = new Product("ramen", 3.5, 6, "packs");
+
+const display = [eggs, milk, ramen];
+
+document.getElementById("classInY").addEventListener("click", () => {
+    let strOutput = document.getElementById("classOut");
+    strOutput.textContent = "";
+    for(let i = 0; i < display.length; i++){
+        strOutput.innerHTML += `- ${display[i].displayProduct()} <br>`;
+    }
+    strOutput.innerHTML += "<br>These values are displayed thanks to an array of objects";
+});
+
+document.getElementById("classInN").addEventListener("click", () => {
+    document.getElementById("classOut").textContent = "Ok, Have a nice day!";
+});

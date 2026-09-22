@@ -45,8 +45,11 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - filter()
             - reduce()
         - Functions, Objects and Classes
-            - Function Expression
+            - Function Expressions
             - Arrow Functions
+            - Objects
+            - Constructors
+            - Classes
     - Advance Javascript
 
 - TypeScript ⏳
