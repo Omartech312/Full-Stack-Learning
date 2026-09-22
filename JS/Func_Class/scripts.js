@@ -70,14 +70,19 @@ document.getElementById("constOut").innerHTML = `<br>Jealous by this, their neig
 // Classes provide a claner way to organize a constructor
 
 class Product{
+
+    static productCount = 0;
+
     constructor(name, price, quantity, metric){
         this.name = name;
         this.price = price;
         this.quantity = quantity;
         this.metric = metric;
+        //When a new product is added then the product count is incremented
+        Product.productCount++;
     }
     displayProduct(){
-        return `${this.quantity} ${this.metric} of ${this.name} for ${this.price}`;
+        return `${this.quantity} ${this.metric} of ${this.name} for $${this.price}`;
     }
 }
 
@@ -88,14 +93,39 @@ const ramen = new Product("ramen", 3.5, 6, "packs");
 const display = [eggs, milk, ramen];
 
 document.getElementById("classInY").addEventListener("click", () => {
+    // gets and clears the output tag
     let strOutput = document.getElementById("classOut");
-    strOutput.textContent = "";
-    for(let i = 0; i < display.length; i++){
+    strOutput.innerHTML = `We currently have the following ${Product.productCount} options: <br>`;
+
+    // loops through the array using static variable as the ending point
+    for(let i = 0; i < Product.productCount; i++){
         strOutput.innerHTML += `- ${display[i].displayProduct()} <br>`;
     }
-    strOutput.innerHTML += "<br>These values are displayed thanks to an array of objects";
+    strOutput.innerHTML += "<br>These values are displayed thanks to an array of objects and static variables";
 });
 
 document.getElementById("classInN").addEventListener("click", () => {
     document.getElementById("classOut").textContent = "Ok, Have a nice day!";
 });
+
+// static is a keyword that defines properties or methods that belong to a class itself
+// rather than the objects created fromt hat class (The class owns statics, not the objects)
+
+/*
+class MathUtilities{
+    //static property
+    static PI = 3.1415;
+
+    static getCircumference(radius){
+        return 2 * this.PI * radius;
+    }
+
+    static getArea(radius){
+        return this.PI * radius * radius;
+    }
+}
+
+console.log(MathUtilities.PI);
+console.log(MathUtilities.getCircumference(10));
+console.log(MathUtilities.getArea(10));
+*/
