@@ -48,8 +48,12 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Function Expressions
             - Arrow Functions
             - Objects
+            - Keyword: this
             - Constructors
             - Classes
+            - Inheritance
+            - Destructing
+            - Static & Super Keywords
     - Advance Javascript
 
 - TypeScript ⏳
