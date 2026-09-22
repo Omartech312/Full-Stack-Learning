@@ -108,24 +108,50 @@ document.getElementById("classInN").addEventListener("click", () => {
     document.getElementById("classOut").textContent = "Ok, Have a nice day!";
 });
 
+
 // static is a keyword that defines properties or methods that belong to a class itself
 // rather than the objects created fromt hat class (The class owns statics, not the objects)
-
 /*
 class MathUtilities{
     //static property
     static PI = 3.1415;
-
     static getCircumference(radius){
-        return 2 * this.PI * radius;
-    }
-
+        return 2 * this.PI * radius; }
     static getArea(radius){
-        return this.PI * radius * radius;
-    }
+        return this.PI * radius * radius; }
 }
-
 console.log(MathUtilities.PI);
 console.log(MathUtilities.getCircumference(10));
 console.log(MathUtilities.getArea(10));
 */
+
+class Animal{
+    alive = true;
+
+    eat(){
+        if(this.alive){
+            return `${this.name} is eating`;
+        }
+        return `Unfortunely ${this.name} is no longer alive`;
+    }
+    sleep(){
+        if(this.alive){
+            return `${this.name} is sleeping`;
+        }
+        return `Unfortunely ${this.name} is no longer alive`;
+    }
+}
+
+class Rabbit extends Animal{
+    name = "rabbit";
+}
+
+class Hawk extends Animal{
+    name = "hawk";
+}
+
+const rabbit = new Rabbit();
+const hawk = new Hawk();
+
+// The hawk then comes and unalives the rabbit
+rabbit.alive = false;
