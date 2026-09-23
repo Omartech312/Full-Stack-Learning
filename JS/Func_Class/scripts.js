@@ -130,18 +130,19 @@ class Animal{
 
     eat(){
         if(this.alive){
-            return `${this.name} is eating`;
+            return `${this.name} eats`;
         }
         return `Unfortunely ${this.name} is no longer alive`;
     }
     sleep(){
         if(this.alive){
-            return `${this.name} is sleeping`;
+            return `${this.name} sleeps`;
         }
         return `Unfortunely ${this.name} is no longer alive`;
     }
 }
 
+//Thiese classes inherit eat and sleep from the Animal calss
 class Rabbit extends Animal{
     name = "rabbit";
 }
@@ -153,5 +154,20 @@ class Hawk extends Animal{
 const rabbit = new Rabbit();
 const hawk = new Hawk();
 
-// The hawk then comes and unalives the rabbit
-rabbit.alive = false;
+
+document.getElementById("story").addEventListener("click", () => {
+    rabbit.alive = true;
+    let outP = document.getElementById("storyOut");
+    outP.textContent = "";
+
+
+    outP.innerHTML += `On a regular day like any other you found a strangely friendly ${rabbit.name}<br>`;
+    outP.innerHTML += `You feed him, and so the ${rabbit.eat()} <br>`;
+    outP.innerHTML += `After a feast the rabbit looks tired, and so the ${rabbit.sleep()} <br>`;
+    outP.innerHTML += `You take care of this little fellow for a couple of month <br>`;
+    outP.innerHTML += `One cloudy morning, you let your rabbit rest on the backyard<br>`;
+    outP.innerHTML += `a couple of hours later you find no traces of your companion.<br>`;
+    rabbit.alive = false;
+    outP.innerHTML += `What you don't know is that a ${hawk.eat()} just a couple miles away from you<br>`;
+    outP.innerHTML += `In agony you leave food outside just in case, but ${rabbit.sleep()}`;
+});
