@@ -19,3 +19,11 @@ h2 {
     margin-bottom: 5px;
     margin-left: 3px;
 }
+
+.altoutput {
+    font-size: 1.1em;
+    text-shadow: 2px 2px 10px rgb(239, 193, 129), -2px -2px 10px rgb(239, 193, 129);
+    margin-top: 4px;
+    margin-bottom: 5px;
+    margin-left: 3px;
+}
