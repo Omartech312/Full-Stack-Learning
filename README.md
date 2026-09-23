@@ -50,10 +50,9 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Objects
             - Keyword: this
             - Constructors
-            - Classes
-            - Inheritance
-            - Destructing
-            - Static & Super Keywords
+            - Classes & Static
+            - Inheritance & Super Keyword
+            -
     - Advance Javascript
 
 - TypeScript ⏳
