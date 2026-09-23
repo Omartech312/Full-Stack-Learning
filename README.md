@@ -52,7 +52,9 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Constructors
             - Classes & Static
             - Inheritance & Super Keyword
-            -
+            - Setters and Getters
+            - Destructors 
+            - Nested Objects
     - Advance Javascript
 
 - TypeScript ⏳
