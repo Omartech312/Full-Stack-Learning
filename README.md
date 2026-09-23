@@ -9,7 +9,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
 
 ### Foundations
 
-- HTML ✅
+- HTML ✅ (Interactive module)
     - One HTML file covering document structure, metadata, text formatting, links, images, tables, lists, forms, buttons, divs, spans, and iframes.
 
 - CSS ✅

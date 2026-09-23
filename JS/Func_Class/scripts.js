@@ -171,3 +171,60 @@ document.getElementById("story").addEventListener("click", () => {
     outP.innerHTML += `What you don't know is that a ${hawk.eat()} just a couple miles away from you<br>`;
     outP.innerHTML += `In agony you leave food outside just in case, but ${rabbit.sleep()}`;
 });
+
+// Super is used in classes to call the cosntructor or access the properties and methods of a parent
+// this = this class
+// super = the parent
+
+class Honda{
+    make = "Honda";
+
+    constructor(year, color, wheels){
+        this.year = year;
+        this.color = color;
+    }
+}
+
+class Civic extends Honda{
+    model = "Civic";
+    
+    constructor(year, color, wheels, luxuryLevel){
+        //reuses the parent's contructor for year and color
+        super(year, color, wheels);
+        this.luxuryLevel = luxuryLevel;
+    }
+
+    advertise(){
+        return `${this.color} ${this.make} ${this.model}, ${this.year}, ${this.luxuryLevel} model <br>`;
+    }
+}
+
+class Accord extends Honda{
+    model = "Accord";
+
+    constructor(year, color, wheels, cylinders){
+        super(year, color, wheels);
+        this.cylinders = cylinders;
+    }
+    advertise(){
+        return `${this.color} ${this.make} ${this.model}, ${this.year}, ${this.cylinders} cylinders <br>`
+    }
+}
+
+class CR extends Honda{
+    model = "CR";
+
+    constructor(year, color, wheels, classification){
+        super(year, color, wheels);
+        this.classification = classification;
+    }
+    advertise(){
+        return `${this.color} ${this.make} ${this.model}, ${this.year}, ${this.classification} <br>`
+    }
+}
+
+let civic = new Civic(2020, "Red", 4, "Luxury");
+let accord = new Accord(2024, "Grey", 4, 6);
+let bike = new CR(2026, "SIlver", 2, "SuperSport");
+
+document.getElementById("superOut").innerHTML = `- ${civic.advertise()}- ${accord.advertise()}- ${bike.advertise()}`;
