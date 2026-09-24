@@ -228,3 +228,9 @@ let accord = new Accord(2024, "Grey", 4, 6);
 let bike = new CR(2026, "SIlver", 2, "SuperSport");
 
 document.getElementById("superOut").innerHTML = `- ${civic.advertise()}- ${accord.advertise()}- ${bike.advertise()}`;
+
+//Getters and Setters
+
+class User{
+    
+}
