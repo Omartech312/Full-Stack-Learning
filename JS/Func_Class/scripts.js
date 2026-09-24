@@ -229,8 +229,35 @@ let bike = new CR(2026, "SIlver", 2, "SuperSport");
 
 document.getElementById("superOut").innerHTML = `- ${civic.advertise()}- ${accord.advertise()}- ${bike.advertise()}`;
 
-//Getters and Setters
+//Setters, Getters and Private Properties
 
-class User{
-    
+class Cypher{
+    #message
+    #shift
+
+    constructor(message, shift){
+        this.message = message;
+        this.shift = shift;
+    }
+
+    set message(newMessage){
+        if(newMessage.length > 0 && validate()){
+            this._message = newMessage;
+        }
+
+    }
+
+    validate(){
+        this.message.forEach(console.log(item));
+    }
 }
+
+function encrypt(message, shift){
+    let encryptedMessage = "";
+    for(let i = 0; i < message.length; i++){
+        encryptedMessage += message[i] + shift;
+    }
+    console.log(encryptedMessage);
+}
+
+let encMes = new Cypher("ATTACK AT DAWN", 3);
