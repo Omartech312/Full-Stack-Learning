@@ -52,7 +52,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Constructors
             - Classes & Static
             - Inheritance & Super Keyword
-            - Setters and Getters
+            - Setter, Getters & Private
             - Destructors 
             - Nested Objects
     - Advance Javascript

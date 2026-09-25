@@ -229,7 +229,12 @@ let bike = new CR(2026, "SIlver", 2, "SuperSport");
 
 document.getElementById("superOut").innerHTML = `- ${civic.advertise()}- ${accord.advertise()}- ${bike.advertise()}`;
 
-//Setters, Getters and Private Properties
+// Setters, Getters and Private Properties
+// getter is a special method that makes a property readable
+// setter is a special method that makes a property writeable
+
+// validate and modify a value when reading/writing a property
+
 
 class Cypher{
     #message
@@ -241,14 +246,35 @@ class Cypher{
     }
 
     set message(newMessage){
-        if(newMessage.length > 0 && validate()){
-            this._message = newMessage;
+        if(typeof newMessage === "string" && newMessage.length > 0){
+            this.#message = newMessage;
         }
 
     }
 
-    validate(){
-        this.message.forEach(console.log(item));
+    set shift(newNumber){
+        if(Number(newNumber) >= 0){
+            this.#shift = Number(newNumber);
+        }
+        else{
+            console.log("Please provide a positive valid number");
+        }
+    }
+
+    get message(){
+        return this.#message;
+    }
+
+    get shift(){
+        return this.#shift;
+    }
+
+    get encryption(){
+        let encryption = "";
+        for(let i = 0; i < this.#message.length; i++){
+            encryption += this.#message[i] + this.shift;
+        }
+        return encryption;
     }
 }
 
@@ -260,4 +286,10 @@ function encrypt(message, shift){
     console.log(encryptedMessage);
 }
 
-let encMes = new Cypher("ATTACK AT DAWN", 3);
+let encryption = new Cypher("ATTACK AT DAWN", 3);
+console.log(encryption.message);
+document.getElementById("encryptButton").addEventListener("click", () => {
+    let input = document.getElementById("encryptIn").value;
+    encryption.message = input;
+    console.log(encryption.message);
+});
