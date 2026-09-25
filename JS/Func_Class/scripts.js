@@ -248,6 +248,7 @@ class Cypher{
     set message(newMessage){
         if(typeof(newMessage) === "string" && newMessage.length > 0){
             this.#message = newMessage;
+            document.getElementById("encryOut").textContent = this.encryption;
         }
         else{
             document.getElementById("encryOut").innerHTML = "Please Provide a proper String";
@@ -258,6 +259,7 @@ class Cypher{
     set shift(newNumber){
         if(Number(newNumber) >= 0){
             this.#shift = Number(newNumber);
+            document.getElementById("encryOut").textContent = this.encryption;
         }
         else{
             document.getElementById("encryOut").innerHTML = "Please Provide a valid Positive whole number";
@@ -289,14 +291,12 @@ class Cypher{
 }
 
 let encryption = new Cypher("ATTACK AT DAWN", 3);
-document.getElementById("encryOut").innerHTML = encryption.encryption;
+document.getElementById("encryOut").textContent = encryption.encryption;
 
 document.getElementById("encryptButton").addEventListener("click", () => {
     encryption.message = document.getElementById("encryptIn").value;
-    document.getElementById("encryOut").innerHTML = encryption.encryption;
 });
 
 document.getElementById("shiftButton").addEventListener("click", () =>{
     encryption.shift = document.getElementById("shiftIn").value;
-    document.getElementById("encryOut").innerHTML = encryption.encryption;
 })
