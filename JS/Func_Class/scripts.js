@@ -342,3 +342,26 @@ displayChar(McLovin);
 function displayChar({first, age, job, personality}){
     document.getElementById("displayOut").innerHTML = `One of the greatest characters in movies is ${first}, ruling with world with only ${age} years of age. His position as the ${job} combined with his ${personality} traits ensure his success.`
 }
+
+// An object inside another object. Useful to represent more complex data structures
+class Character{
+    constructor(name, age, hp, ...weapon){
+        this.name = name;
+        this.age = age;
+        this.hp = hp;
+        this.weapon = new Weapon(...weapon);
+    }
+}
+
+class Weapon{
+    constructor(damage, durability){
+        this.damage = damage;
+        this.durability = durability;
+    }
+}
+
+let steve = new Character("Steve", 25, 40, 8, 1561);
+console.log(steve);
+
+document.getElementById("nestedOut").innerHTML = `Object ${steve.name} can exist by itself containing a name, age: ${steve.age}, and the character's HP: ${steve.hp}. Nesting comes when you observe the sword
+which is an object formed from an independent class capable of holding a weapon's damage: ${steve.weapon.damage} and its durability: ${steve.weapon.durability}`;
