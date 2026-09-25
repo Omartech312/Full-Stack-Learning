@@ -24,7 +24,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
 
 - JavaScript 🚧
     - Programming Fundamentals
-        - Data Types and Operators (Mostly Interactive module)
+        - Data Types and Operators (Mostly Interactive)
             - Variables
             - Arithmetic
             - User Input
@@ -37,16 +37,18 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Guessing Game ← exercise
             - Temperature Conversion ← exercise
             - Callback
-        - Rest & Spread Syntax and Array Methods (Interactive module)
+        - Rest & Spread Syntax and Array Methods (Interactive)
             - Rest
             - Spread
             - forEach()
             - map()
             - filter()
             - reduce()
-        - Functions, Objects and Classes
+        - Functions, Objects and Classes (Somewhat Interactive)
             - Function Expressions
             - Arrow Functions
+            - Closure
+            - setTimeout Function
             - Objects
             - Keyword: this
             - Constructors
@@ -55,6 +57,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Setter, Getters & Private
             - Destructuring 
             - Nested Objects
+            - Date Objects
     - Advance Javascript
 
 - TypeScript ⏳
