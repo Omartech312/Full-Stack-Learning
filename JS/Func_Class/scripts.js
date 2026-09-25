@@ -246,8 +246,11 @@ class Cypher{
     }
 
     set message(newMessage){
-        if(typeof newMessage === "string" && newMessage.length > 0){
+        if(typeof(newMessage) === "string" && newMessage.length > 0){
             this.#message = newMessage;
+        }
+        else{
+            document.getElementById("encryOut").innerHTML = "Please Provide a proper String";
         }
 
     }
@@ -257,7 +260,7 @@ class Cypher{
             this.#shift = Number(newNumber);
         }
         else{
-            console.log("Please provide a positive valid number");
+            document.getElementById("encryOut").innerHTML = "Please Provide a valid Positive whole number";
         }
     }
 
@@ -272,24 +275,28 @@ class Cypher{
     get encryption(){
         let encryption = "";
         for(let i = 0; i < this.#message.length; i++){
-            encryption += this.#message[i] + this.shift;
+            if(this.#message[i] != ' '){
+                let code = this.#message[i].charCodeAt(0);
+                code = ((code - 65 + this.#shift) % 26) + 65
+                encryption += String.fromCharCode(code);
+            }
+            else{
+                encryption += ' ';
+            }
         }
         return encryption;
     }
 }
 
-function encrypt(message, shift){
-    let encryptedMessage = "";
-    for(let i = 0; i < message.length; i++){
-        encryptedMessage += message[i] + shift;
-    }
-    console.log(encryptedMessage);
-}
-
 let encryption = new Cypher("ATTACK AT DAWN", 3);
-console.log(encryption.message);
+document.getElementById("encryOut").innerHTML = encryption.encryption;
+
 document.getElementById("encryptButton").addEventListener("click", () => {
-    let input = document.getElementById("encryptIn").value;
-    encryption.message = input;
-    console.log(encryption.message);
+    encryption.message = document.getElementById("encryptIn").value;
+    document.getElementById("encryOut").innerHTML = encryption.encryption;
 });
+
+document.getElementById("shiftButton").addEventListener("click", () =>{
+    encryption.shift = document.getElementById("shiftIn").value;
+    document.getElementById("encryOut").innerHTML = encryption.encryption;
+})
