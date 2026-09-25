@@ -300,3 +300,44 @@ document.getElementById("encryptButton").addEventListener("click", () => {
 document.getElementById("shiftButton").addEventListener("click", () =>{
     encryption.shift = document.getElementById("shiftIn").value;
 })
+
+// Destructuring is when you extract values from arrays and objects to then reassign them to variables in convinient ways.
+// [] for array destructuring
+// {} ofr object destructuring
+
+// examples:
+console.log("Below are examples of Destructuring");
+
+    //variables
+let a = 15;
+let b = 20;
+
+[a,b] = [b,a];
+console.log(`a is ${a}, and b is ${b}`);
+
+    // arrays
+
+let arr = ["First", "Second", "Third", "Fourth", "Fifth"];
+// swaps index 0 with 4. Can be a neat way of swapping without a temp var
+[arr[0], arr[4]] = [arr[4], arr[0]];
+console.log(arr);
+
+    // arrays and variables
+
+let characterArr = ["Goku", "Naruto", "Dr.House", "Walter W.", "Guts", "Rock Lee"];
+
+const [dragonBall, Naruto, House, Breaking, ...others] = characterArr;
+console.log(`Dragon ball: ${dragonBall}\nBoruto: ${Naruto}\nMedicine: ${House}\nBreaking Bad: ${Breaking}\nOthers: ${others}`);
+
+const McLovin = {
+    first: "McLOVIN",
+    age: 25,
+    job: "CEO of Superbad",
+    personality: "Hustler"
+}
+
+displayChar(McLovin);
+
+function displayChar({firstName, Age, Job, personality}){
+    document.getElementById("displayOut").innerHTML = `One of the greatest characters in movies is ${firstName}, ruling with world with only ${Age} years of age. His position as the ${Job} combined with his ${personality} traits ensure his success.`
+}
