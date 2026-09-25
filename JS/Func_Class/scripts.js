@@ -338,6 +338,7 @@ const McLovin = {
 
 displayChar(McLovin);
 
-function displayChar({firstName, Age, Job, personality}){
-    document.getElementById("displayOut").innerHTML = `One of the greatest characters in movies is ${firstName}, ruling with world with only ${Age} years of age. His position as the ${Job} combined with his ${personality} traits ensure his success.`
+// Use the exact same property names to ensure the values are correctly retrieved. Otherwise, it gives undefined values
+function displayChar({first, age, job, personality}){
+    document.getElementById("displayOut").innerHTML = `One of the greatest characters in movies is ${first}, ruling with world with only ${age} years of age. His position as the ${job} combined with his ${personality} traits ensure his success.`
 }
