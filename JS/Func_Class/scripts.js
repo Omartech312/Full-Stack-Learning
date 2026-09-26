@@ -54,6 +54,18 @@ function play(Choice){
     document.getElementById("score").textContent = score;
 }
 
+//setTimeout() is a function that allows you to schedule the exectuion of functions after X amount of time
+//setTimeout(callback, delay);
+setTimeout(displayTimeout, 7500);
+
+function displayTimeout(){
+    document.getElementById("setTimeOut").textContent = "I'm sorry for keeping you waiting, You may proceed";
+}
+
+
+
+// OBJECTS
+
 //object is a collection of properties and methods representing real life objects in a sense
 const learner = {
     name: "Omar",
