@@ -23,6 +23,27 @@ expression();
 let print = () => document.getElementById("arrOutput").textContent = "This text was printed using an arrow function";
 print();
 
+let score = 0;
+// Close refers to  function defined within another function. The inner one has acces to the scope and variables of the outer function. 
+// This allows for private variables and state maintenance. Frequently used in JS frameworks: React, Vue, Angular
+function play(Choice){
+    let computer = Math.floor(Math.random() * (2 - 0 + 1) + 0);
+    let result = true;
+
+    function winner(){
+        if(Choice === 2 && computer === 0){
+            result = false;
+        }
+        else if(computer - Choice === 1){
+            result = false;
+        }
+        console.log(`Computer: ${computer}, Player: ${Choice}, Result: ${result}`);
+    }
+
+    console.log(`Computer guess: ${computer}`);
+    console.log(`Your choce: ${Choice}`);
+}
+play();
 
 //object is a collection of properties and methods representing real life objects in a sense
 const learner = {
