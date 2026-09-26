@@ -395,3 +395,13 @@ console.log(steve);
 
 document.getElementById("nestedOut").innerHTML = `Object ${steve.name} can exist by itself containing a name, age: ${steve.age}, and the character's HP: ${steve.hp}. Nesting comes when you observe the sword
 which is an object formed from an independent class capable of holding a weapon's damage: ${steve.weapon.damage} and its durability: ${steve.weapon.durability}`;
+
+// Date is an object that contains values that represent dates and times. These objects can be changed and formatted
+
+// if you create a Date object without passing any values, it will use your current
+
+// you can also set specific times using: Date(year, month, day, hour, minute, second, ms)
+const date = new Date();
+
+//Displays time when user entered this website
+document.getElementById("timeOut").textContent = `${date.getHours()%12}:${date.getMinutes()} ${(date.getHours()) > 12 ? "PM" : "AM"}`;
