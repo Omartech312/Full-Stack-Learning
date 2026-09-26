@@ -28,22 +28,31 @@ let score = 0;
 // This allows for private variables and state maintenance. Frequently used in JS frameworks: React, Vue, Angular
 function play(Choice){
     let computer = Math.floor(Math.random() * (2 - 0 + 1) + 0);
-    let result = true;
+    let output = document.getElementById("closureOut");
 
     function winner(){
-        if(Choice === 2 && computer === 0){
-            result = false;
+        options = ["Rock", "Paper", "Scissors"];
+        output.innerHTML = `Computer played: ${options[computer]} <br>You played: ${options[Choice]}<br>`;
+        if(Choice === 2 && computer === 0 ||
+                    computer - Choice === 1){
+                output.innerHTML += "You Lost";
+                score--;
+                return 0;
         }
-        else if(computer - Choice === 1){
-            result = false;
+        else if(Choice === computer){
+            output.innerHTML += "Draw";
+            return 2;
         }
-        console.log(`Computer: ${computer}, Player: ${Choice}, Result: ${result}`);
+        output.innerHTML += "You Won!";
+        score++;
+        return 1;
     }
+    winner();
 
     console.log(`Computer guess: ${computer}`);
     console.log(`Your choce: ${Choice}`);
+    document.getElementById("score").textContent = score;
 }
-play();
 
 //object is a collection of properties and methods representing real life objects in a sense
 const learner = {
