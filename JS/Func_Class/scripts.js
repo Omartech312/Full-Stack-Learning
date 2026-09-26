@@ -62,8 +62,6 @@ function displayTimeout(){
     document.getElementById("setTimeOut").textContent = "I'm sorry for keeping you waiting, You may proceed";
 }
 
-
-
 // OBJECTS
 
 //object is a collection of properties and methods representing real life objects in a sense

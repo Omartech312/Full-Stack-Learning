@@ -58,7 +58,11 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Destructuring 
             - Nested Objects
             - Date Objects
-    - Advance Javascript
+    - Modern JavaScript
+        - Modules and Error Hanling
+            - ES6 Modules
+            - Error Handling
+    - DOM & Browser Interactions
 
 - TypeScript ⏳
 
