@@ -63,7 +63,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - ES6 Modules
             - Error Handling
     - DOM & Browser Interactions
-        -DOM Manipuation
+        - DOM Manipuation
             - What is the DOM?
             - Element Selectors
             - DOM Navigation
