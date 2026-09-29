@@ -111,6 +111,10 @@ children.style.color = "gray";
 // STEP 1: create the element
 const newEle = document.createElement("p");
 
+const pract = document.createElement("h4");
+
+const imag = document.createElement("img");
+
 // Step 2: Add attributes/properties
 newEle.textContent = "I love Gaming";
 newEle.id = "hobbie";
@@ -118,9 +122,31 @@ newEle.style.color = "tomato";
 newEle.style.textAlign = "center";
 newEle.style.fontSize = "1.5em";
 
+pract.textContent = "Yohohoho, hohoho, Yohohoho, hohoho";
+pract.id = "Binks"
+pract.style.color = "skyblue";
+pract.style.textAlign = "center";
+pract.style.fontSize = "2em";
+
+// image/link for binks sake
+imag.style.height = "150px";
+imag.style.width = "150px";
+imag.style.border = "3px solid";
+imag.style.borderColor = "lightgray";
+imag.src = "../../CSS/images/Brook.jpg";
+imag.style.display = "block";
+imag.style.margin = "0 auto";
+
+
+// adjust to fit all content
+document.getElementById("box1").style.height = "auto";
+
 // Step 3: append elemnt to DOM
 //append adds to the end
 //prepend adds to the start
 document.getElementById("box2").append(newEle);
+document.getElementById("box1").prepend(pract);
+document.getElementById("linkB").append(imag);
+
 
 // example to remove 
