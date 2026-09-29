@@ -138,6 +138,7 @@ imag.style.borderColor = "lightgray";
 imag.src = "../../CSS/images/Brook.jpg";
 imag.style.display = "block";
 imag.style.margin = "0 auto";
+imag.style.marginBottom = "15px";
 
 txt.textContent = "The image below is a link";
 txt.style.textAlign = "center";
@@ -154,8 +155,30 @@ document.getElementById("box2").append(newEle);
 document.getElementById("box1").prepend(pract);
 document.getElementById("linkB").append(imag);
 
+// stores boxes into nodelist
+//const boxes = document.querySelectorAll(".box");
+
 const box1 = document.getElementById("box1");
-document.body.insertBefore(txt, box1);
+//Insets the txt before the second box
+const linkB = document.getElementById("linkB");
+box1.insertBefore(txt, linkB);
 
 
 // example to remove 
+
+//selects the element to be removed
+const secret = document.getElementById("secret");
+// gets the parent and from there remove the desired child
+document.getElementById("box3").removeChild(secret);
+
+// Continuation of Add & CHange HTML
+
+//list item
+const listItem = document.createElement("li");
+
+listItem.textContent = "Gray";
+listItem.id = "Gray";
+listItem.style.fontWeight = "bold";
+listItem.style.backgroundColor = "gray";
+
+document.getElementById("colors").prepend(listItem);

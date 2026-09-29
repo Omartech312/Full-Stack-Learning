@@ -25,3 +25,8 @@ h2 {
     width: 100%;
     height: 135px;
 }
+
+#colors {
+    border: 4px solid;
+    font-size: 1.9em;
+}
