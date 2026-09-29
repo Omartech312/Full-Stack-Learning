@@ -62,3 +62,44 @@ vegetables.forEach(vegetable => {
     vegetable.style.color = "gray";
 })
 vegetables[1].style.textAlign = "center";
+
+
+
+// DOM Navigation is moving through the structure of an HTML doc using JS
+
+/*
+.firstElementChild
+.lastElementChild
+.nextElementSibling
+.previousElementSibling
+.parentElement
+.Children
+*/
+// selects the mexican id then its first child followed by the next (second child)
+const mexFood = document.getElementById("mexican");
+const firstChild = mexFood.firstElementChild;
+
+//sets colors to a green(ish) and red colors
+firstChild.style.color = "hsl(144, 88%, 61%)";
+firstChild.nextElementSibling.style.color = "red";
+
+// selects fast id then its last child (3rd) followed by the previous (second child)
+const fastFood = document.getElementById("fast");
+const lastChild = fastFood.lastElementChild;
+
+//sets colors to skyblue and purple
+lastChild.style.color = "skyblue";
+lastChild.previousElementSibling.style.color = "purple";
+
+
+// selects ice cream then goes to the parent through parentElement and changes the background color to blue and  
+const parent = document.getElementById("ice").parentElement;
+parent.style.backgroundColor = "hsl(220, 100%, 57%)";
+// the border radius to 10px basically making the edges round
+parent.style.borderRadius = "10px";
+
+
+//Selects the third child of mexFood and sets color to gray
+const children = mexFood.children[2];
+children.style.color = "gray";
+
