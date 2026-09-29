@@ -115,6 +115,8 @@ const pract = document.createElement("h4");
 
 const imag = document.createElement("img");
 
+const txt = document.createElement("p");
+
 // Step 2: Add attributes/properties
 newEle.textContent = "I love Gaming";
 newEle.id = "hobbie";
@@ -137,6 +139,10 @@ imag.src = "../../CSS/images/Brook.jpg";
 imag.style.display = "block";
 imag.style.margin = "0 auto";
 
+txt.textContent = "The image below is a link";
+txt.style.textAlign = "center";
+txt.style.color = "white";
+
 
 // adjust to fit all content
 document.getElementById("box1").style.height = "auto";
@@ -147,6 +153,9 @@ document.getElementById("box1").style.height = "auto";
 document.getElementById("box2").append(newEle);
 document.getElementById("box1").prepend(pract);
 document.getElementById("linkB").append(imag);
+
+const box1 = document.getElementById("box1");
+document.body.insertBefore(txt, box1);
 
 
 // example to remove 
