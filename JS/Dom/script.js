@@ -57,6 +57,8 @@ firstElement.style.color = "red"
 // querySelectorAll creates a node list which does have forEach method, so no need to use Array.from()
 const vegetables = document.querySelectorAll(".vegetable");
 
-vegetables.forEach(vetable => {
-    vetable.style.backgroundColor = "hsl(144, 88%, 61%)";
+vegetables.forEach(vegetable => {
+    vegetable.style.backgroundColor = "hsl(144, 88%, 61%)";
+    vegetable.style.color = "gray";
 })
+vegetables[1].style.textAlign = "center";
