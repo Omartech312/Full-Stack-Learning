@@ -103,3 +103,24 @@ parent.style.borderRadius = "10px";
 const children = mexFood.children[2];
 children.style.color = "gray";
 
+
+
+// Add and Change HTML
+// The creation and appeding of HTML elements can be compressed into the following 3 steps:
+
+// STEP 1: create the element
+const newEle = document.createElement("p");
+
+// Step 2: Add attributes/properties
+newEle.textContent = "I love Gaming";
+newEle.id = "hobbie";
+newEle.style.color = "tomato";
+newEle.style.textAlign = "center";
+newEle.style.fontSize = "1.5em";
+
+// Step 3: append elemnt to DOM
+//append adds to the end
+//prepend adds to the start
+document.getElementById("box2").append(newEle);
+
+// example to remove 
