@@ -68,7 +68,10 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Element Selectors
             - DOM Navigation
             - Add & Change HTML
-            
+            - Hide/Show HTML
+        - Events
+            - Mouse Events
+            - Key Events
 
 - TypeScript ⏳
 
