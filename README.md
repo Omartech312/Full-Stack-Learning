@@ -74,6 +74,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
         - Events
             - Mouse Events
             - Key Events
+    - Asynchronous JS & APIs
 
 - TypeScript ⏳
 
