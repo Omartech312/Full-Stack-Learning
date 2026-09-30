@@ -193,3 +193,9 @@ document.getElementById("hide").addEventListener("click", () =>{
         page.style.display = "none";
     }
 })
+
+document.getElementById("hide").style.backgroundColor = "white";
+document.getElementById("hide").style.border = "3px solid";
+document.getElementById("hide").style.borderColor = "skyblue"
+document.getElementById("hide").style.borderRadius = "8px";
+document.getElementById("hide").style.fontSize = "2em";
