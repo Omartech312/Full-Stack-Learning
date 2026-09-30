@@ -68,6 +68,8 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Element Selectors
             - DOM Navigation
             - Add & Change HTML
+            - NodeList
+            - classList
             - Hide/Show HTML
         - Events
             - Mouse Events

@@ -27,8 +27,13 @@ let x = 0;
 let y = 0;
 
 document.addEventListener("keydown", event => {
+    console.log(event.key);
+
     if(event.key.startsWith("Arrow")){
+        movBox.textContent = "🫪";
+        event.preventDefault();
         switch(event.key){
+            
             case "ArrowUp":
                 y -= moveAmount;
                 break;
@@ -47,4 +52,8 @@ document.addEventListener("keydown", event => {
         box2.style.left = `${x}px`;
     }
     //console.log(event.key);
-})
+});
+
+document.addEventListener("keyup", event =>{
+    movBox.textContent = "😎";
+});

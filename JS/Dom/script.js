@@ -183,14 +183,16 @@ listItem.style.backgroundColor = "gray";
 
 document.getElementById("colors").prepend(listItem);
 
-document.getElementById("hide").addEventListener("click", () =>{
+document.getElementById("hide").addEventListener("click", button =>{
     page = document.getElementById("everything");
 
     if(page.style.display === "none"){
         page.style.display = "block";
+        button.target.textContent = "Hide";
     }
     else{
         page.style.display = "none";
+        button.target.textContent = "Show";
     }
 })
 
