@@ -21,3 +21,14 @@ h2 {
     text-align: center;
     border-radius: 10px;  
 }
+
+#box2{
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    font-size: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
