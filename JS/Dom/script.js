@@ -182,3 +182,14 @@ listItem.style.fontWeight = "bold";
 listItem.style.backgroundColor = "gray";
 
 document.getElementById("colors").prepend(listItem);
+
+document.getElementById("hide").addEventListener("click", () =>{
+    page = document.getElementById("everything");
+
+    if(page.style.display === "none"){
+        page.style.display = "block";
+    }
+    else{
+        page.style.display = "none";
+    }
+})
