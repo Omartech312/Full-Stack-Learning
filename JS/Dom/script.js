@@ -210,6 +210,35 @@ buttons.forEach( button => {
 });
 
 
+// classList is a property in JS used to interact with an elements's list of classes, allowing for the reuse of clases in many elements
+let classB = document.querySelectorAll(".list");
+
+classB.forEach(button => {
+    button.classList.add("enabled");
+});
+
+classB.forEach(button => {
+    button.addEventListener("mouseover", event => {
+        event.target.classList.toggle("hover");
+    });
+});
+
+classB.forEach(button => {
+    button.addEventListener("mouseout", event => {
+        event.target.classList.toggle("hover");
+    });
+});
+
+classB.forEach(button => {
+    button.addEventListener("click", event => {
+        if(event.target.classList.contains("disabled")){
+            event.target.textContent = "Disabled";
+        }
+        else{
+            event.target.classList.replace("enabled", "disabled");
+        }
+    })
+})
 
 
 
@@ -225,7 +254,7 @@ document.getElementById("hide").addEventListener("click", button =>{
         page.style.display = "none";
         button.target.textContent = "Show";
     }
-})
+});
 
 document.getElementById("hide").style.backgroundColor = "white";
 document.getElementById("hide").style.border = "3px solid";

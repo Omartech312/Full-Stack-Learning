@@ -71,7 +71,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - NodeList
             - classList
             - Hide/Show HTML
-        - Events
+        - Events (Interactive)
             - Mouse Events
             - Key Events
     - Asynchronous JS & APIs
