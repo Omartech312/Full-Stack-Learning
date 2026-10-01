@@ -37,3 +37,49 @@ chores(laundry);
 
 // Callback hell is a situation where callbaks are nested witin other callbacks making the code 
 // difficult to read. Its better to use Promises and async/await to aboid these kind of situations.
+
+const hellOut = document.getElementById("callbackH");
+
+function process1(callback){
+    setTimeout(() => {
+        hellOut.innerHTML = "- Task 1 is complete: Data Extraction";
+        callback();
+    }, 2000);
+}
+
+function process2(callback){
+    setTimeout(() => {
+        hellOut.innerHTML += "<br>- Task 2 is complete: Data Validation";
+        callback();
+    }, 1500);
+}
+
+function process3(callback){
+    setTimeout(() => {
+        hellOut.innerHTML += "<br>- Task 3 is complete: Data Analysis";
+        callback();
+    }, 750);
+}
+
+function process4(callback){
+    setTimeout(() => {
+        hellOut.innerHTML += "<br>- Task 4 is complete: Storing Findings";
+        callback();
+    }, 1250);
+}
+
+function process5(){
+    setTimeout(() => {
+        hellOut.innerHTML += "<br>- Task 5 is complete: Reporting results";
+    }, 250);
+}
+
+process1(() => {
+    process2(() => {
+        process3(() => {
+            process4(() => {
+                process5();
+            });
+        });
+    });
+});
