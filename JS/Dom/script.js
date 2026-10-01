@@ -183,6 +183,37 @@ listItem.style.backgroundColor = "gray";
 
 document.getElementById("colors").prepend(listItem);
 
+
+
+// Nodelist is a static collection of HTML elements (id, classes, element) that can be created using querySelectorAll()
+// similar to arrays, but no (map, filter, reduce) and NodeList does not update automatically
+let buttons = document.querySelectorAll(".node");
+
+buttons.forEach( button => {
+    button.style.backgroundColor = "lightgreen";
+    button.addEventListener("mouseover", event => {
+        event.target.style.backgroundColor = "rgb(250, 112, 81)";
+        event.target.textContent = "Remove";
+    });
+
+    button.addEventListener("mouseout", event => {
+        event.target.style.backgroundColor = "lightgreen";
+        event.target.textContent = "Click me";
+    });
+
+    button.addEventListener("click", event => {
+        event.target.remove();
+        //Without this line buttons would still contain the four original buttons in the NodeList
+        buttons = document.querySelectorAll(".node");
+    });
+    
+});
+
+
+
+
+
+// show hide logic
 document.getElementById("hide").addEventListener("click", button =>{
     page = document.getElementById("everything");
 
@@ -201,3 +232,4 @@ document.getElementById("hide").style.border = "3px solid";
 document.getElementById("hide").style.borderColor = "skyblue"
 document.getElementById("hide").style.borderRadius = "8px";
 document.getElementById("hide").style.fontSize = "2em";
+
