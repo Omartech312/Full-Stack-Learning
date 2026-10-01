@@ -83,3 +83,36 @@ process1(() => {
         });
     });
 });
+
+// Promises are objects that manage asynchronous operations.
+// EX: I promise to return a value
+//     Pending -> resolved or rejected
+//      new Promise((resolve, reject) => {asynchronous code})
+
+// task: prepare cereal
+
+//1: get bowl, spoon, cereal, milk
+//2: add cereal to bowl (YES CEREAL FIRST)
+//3: add milk to bowl
+//4: ENJOY!
+
+function get(callback){
+    setTimeout(() => {
+        console.log("You got everything!");
+        callback();
+    }, 7000);
+}
+
+function addCereal(callback){
+    setTimeout(() => {
+        console.log("after a few seconds of adding cereal, you are ready to add Milk!");
+        callback();
+    }, 3000);
+}
+
+function addMilk(callback){
+    setTimeout(() => {
+        console.log("");
+        callback("You're set, Enjoy!");
+    }, 2000);
+}
