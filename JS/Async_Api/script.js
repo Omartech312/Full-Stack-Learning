@@ -34,3 +34,6 @@ function laundry(time){
 }
 
 chores(laundry);
+
+// Callback hell is a situation where callbaks are nested witin other callbacks making the code 
+// difficult to read. Its better to use Promises and async/await to aboid these kind of situations.

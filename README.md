@@ -75,6 +75,9 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Mouse Events
             - Key Events
     - Asynchronous JS & APIs
+        - Asynchronous JavaScript
+            - Asynchronous Code
+            - Callback Hell
 
 - TypeScript ⏳
 
