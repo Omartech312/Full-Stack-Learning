@@ -96,31 +96,6 @@ process1(() => {
 //3: add milk to bowl
 //4: ENJOY!
 
-function get(){
-    return new Promise((resolve, reject) => {
-    setTimeout(() => {
-
-        console.log("You got everything!");
-        callback();
-
-
-    }, 7000);
-    });
-}
-
-function addCereal(){
-    setTimeout(() => {
-        console.log("after a few seconds of adding cereal, you are ready to add Milk!");
-        callback();
-    }, 3000);
-}
-
-function addMilk(){
-    setTimeout(() => {
-        console.log("You're set, Enjoy!");
-    }, 2000);
-}
-
 let tv = false;
 let console = false;
 const screen = document.getElementById("tv");
@@ -160,3 +135,49 @@ function decideDisplay(){
         }
     }
 }
+
+function checkTV(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(tv){
+                resolve("<br>TV is ready");
+            }
+            else{
+                reject("<br>Dont forget to turn on the TV! ");
+            }
+        }, 1000);
+    });
+}
+
+function checkConsole(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(console){
+                resolve("<br> Console is ready to play");
+            }
+            else{
+                reject("<br>Dont forget to turn on your console!");
+            }
+        }, 1000);
+    });
+}
+
+const playOut = document.getElementById("promiseOut");
+function play(){
+    return new Promise((resolve, reject) => {
+        resolve("You grab your favorite drink and snack");
+    });
+}
+function allset(){
+    return new Promise((resolve, reject) => {
+        resolve("<br>You're ready for a long session, Enjoy!");
+    });
+}
+
+document.getElementById("play").addEventListener("click", () => {
+    play().then(value => {playOut.innerHTML = value; return checkTV()})
+            .then(value => {playOut.innerHTML += value; return checkConsole()})
+            .then(value => {playOut.innerHTML += value; return allset()})
+            .then(value => {playOut.innerHTML += value;})
+            .catch(error => {playOut.innerHTML += (error)});
+});
