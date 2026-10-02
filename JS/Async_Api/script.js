@@ -96,23 +96,27 @@ process1(() => {
 //3: add milk to bowl
 //4: ENJOY!
 
-function get(callback){
+function get(){
+    return new Promise((resolve, reject) => {
     setTimeout(() => {
+
         console.log("You got everything!");
         callback();
+
+        
     }, 7000);
+    });
 }
 
-function addCereal(callback){
+function addCereal(){
     setTimeout(() => {
         console.log("after a few seconds of adding cereal, you are ready to add Milk!");
         callback();
     }, 3000);
 }
 
-function addMilk(callback){
+function addMilk(){
     setTimeout(() => {
-        console.log("");
-        callback("You're set, Enjoy!");
+        console.log("You're set, Enjoy!");
     }, 2000);
 }

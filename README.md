@@ -79,6 +79,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Asynchronous Code
             - Callback Hell
             - Promises
+            - Async/Await
 
 - TypeScript ⏳
 
