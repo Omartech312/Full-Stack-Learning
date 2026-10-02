@@ -103,7 +103,7 @@ function get(){
         console.log("You got everything!");
         callback();
 
-        
+
     }, 7000);
     });
 }
@@ -119,4 +119,44 @@ function addMilk(){
     setTimeout(() => {
         console.log("You're set, Enjoy!");
     }, 2000);
+}
+
+let tv = false;
+let console = false;
+const screen = document.getElementById("tv");
+const light = document.getElementById("light");
+
+document.getElementById("tvButton").addEventListener("click", () => {
+    if(!tv){
+        tv = true;
+        decideDisplay();
+    }
+    else{
+        tv = false;
+        screen.src = "../../CSS/images/off.jpg";
+    }
+});
+
+document.getElementById("consoleButton").addEventListener("click", () => {
+    if(!console){
+        console = true;
+        light.style.backgroundColor = "lightgreen";
+        decideDisplay();
+    }
+    else{
+        console = false;
+        light.style.backgroundColor = "red";
+        decideDisplay();
+    }
+});
+
+function decideDisplay(){
+    if(tv){
+        if(console){
+            screen.src = "../../CSS/images/gow.webp";
+        }
+        else{
+            screen.src = "../../CSS/images/signal.webp";
+        }
+    }
 }

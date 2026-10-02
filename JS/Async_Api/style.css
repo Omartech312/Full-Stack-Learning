@@ -19,10 +19,12 @@ h2 {
 }
 
 #console {
+    margin-top: 5px;
     height: 30px;
     width: 130px;
-    background-color: grey;
+    background-color: rgb(255, 255, 255);
     margin-left: 85px;
+    border-radius: 3px;
 }
 
 #light {
@@ -31,7 +33,16 @@ h2 {
     background-color: red;
     border-radius: 10px;
     margin-top: 10px;
-    margin-left: 110px;
+    margin-left: 105px;
     position: absolute;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.971);
+}
+
+#disk {
+    height: 4px;
+    width: 80px;
+    margin-top: 16px;
+    margin-left: 8px;
+    background-color: black;
+    position: absolute;
 }
