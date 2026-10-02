@@ -80,6 +80,10 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Callback Hell
             - Promises
             - Async/Await
+        - Data & APIs
+            - JSON
+            - Fetch API
+    
 
 - TypeScript ⏳
 
