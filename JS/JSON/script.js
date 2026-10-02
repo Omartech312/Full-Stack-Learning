@@ -24,3 +24,14 @@ fetch("heroes.json")
         // finally adds a space in between each superheroes
         chars.innerHTML += "<br>";
     }));
+
+async function pokemon(){
+    //API
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/pikachu`);
+    console.log(response);
+}
+
+fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error(error));
