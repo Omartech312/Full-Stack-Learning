@@ -1,0 +1,21 @@
+[{
+    "name": "Superman",
+    "age": 34,
+    "superPowers": ["Super Strength", "Flight", "Laser Vision"]
+},
+{
+    "name": "Wonder Woman",
+    "age": 500,
+    "superPowers": ["Super Strength", "High Resistance"]
+},
+{
+    "name": "Batman",
+    "age": 33,
+    "superPowers": ["Money", "Intelligence"]
+},
+{
+    "name" : "Flash",
+    "age": 28,
+    "superPowers" : ["Super Speed", "Healing", "Speed Force"]
+}
+]
