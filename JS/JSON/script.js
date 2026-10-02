@@ -25,6 +25,8 @@ fetch("heroes.json")
         chars.innerHTML += "<br>";
     }));
 
+// list of APIs in case I decide to work with something more significant:  https://public-api-lists.github.io/public-api-lists/ 
+
 async function pokemon(){
     //API
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/pikachu`);
