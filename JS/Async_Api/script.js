@@ -168,16 +168,32 @@ function play(){
         resolve("You grab your favorite drink and snack");
     });
 }
-function allset(){
-    return new Promise((resolve, reject) => {
-        resolve("<br>You're ready for a long session, Enjoy!");
-    });
-}
 
 document.getElementById("play").addEventListener("click", () => {
     play().then(value => {playOut.innerHTML = value; return checkTV()})
             .then(value => {playOut.innerHTML += value; return checkConsole()})
-            .then(value => {playOut.innerHTML += value; return allset()})
+            .then(value => {playOut.innerHTML += value; return "<br>You're ready for a long session, Enjoy!"})
             .then(value => {playOut.innerHTML += value;})
             .catch(error => {playOut.innerHTML += (error)});
 });
+
+
+//Using Async/Await section
+async function asyChores(){
+    try{
+        playOut.innerHTML = await play();
+
+        playOut.innerHTML += await checkTV();
+
+        playOut.innerHTML += await checkConsole();
+
+        playOut.innerHTML += "<br>You're ready for a long session, Enjoy!";
+    }
+    catch(error){
+        playOut.innerHTML += error;
+    }
+}
+
+document.getElementById("async").addEventListener("click", () => {
+    asyChores();
+})
