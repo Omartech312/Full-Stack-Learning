@@ -33,7 +33,17 @@ async function pokemon(){
     console.log(response);
 }
 
-fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error(error));
+document.getElementById("pokeBut").addEventListener("click", () => {
+    const pokemon = document.getElementById("Pokemon").value;
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+        .then(response => response.json())
+        .then(data => {
+            const output = document.getElementById("display");
+            output.innerHTML = `<p>Name: ${data.name}</p>`
+            output.innerHTML += `<img src="${data.sprites.front_default}" >`
+            console.log(data);
+        })
+        .catch(error => console.error(error));
+});
+

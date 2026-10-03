@@ -11,3 +11,19 @@ h1{
 h2 {
     color: rgb(96, 194, 233);
 }
+
+#display{
+    background-image: url(../../CSS/images/pokemonBG.jpg);
+    width: 500px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#sprite{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
