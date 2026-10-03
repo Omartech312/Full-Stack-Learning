@@ -14,16 +14,26 @@ h2 {
 
 #display{
     background-image: url(../../CSS/images/pokemonBG.jpg);
-    width: 500px;
+    width: 420px;
     height: 400px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 500px;
 }
 
 #sprite{
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     object-fit: contain;
+    margin-left: 72px;
+    margin-top: -50px;
+}
+
+#name{
+    font-size: 1.6em;
+    color: white;
+    margin-left: 500px;
+    display: block;
 }

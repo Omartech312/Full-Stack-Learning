@@ -40,8 +40,8 @@ document.getElementById("pokeBut").addEventListener("click", () => {
         .then(response => response.json())
         .then(data => {
             const output = document.getElementById("display");
-            output.innerHTML = `<p>Name: ${data.name}</p>`
-            output.innerHTML += `<img src="${data.sprites.front_default}" >`
+            output.innerHTML = `<p id="name">Name: ${data.name} (${data.id})</p>`;
+            output.innerHTML += `<img id="sprite" src="${data.sprites.front_default}" >`;
             console.log(data);
         })
         .catch(error => console.error(error));
