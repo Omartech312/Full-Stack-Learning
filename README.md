@@ -22,7 +22,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
     - Pagination, Dropdown Menus, and Navigation Bars
     - Flexbox, Transformations and Animations (Interactive module)
 
-- JavaScript 🚧
+- JavaScript ✅
     - Programming Fundamentals
         - Data Types and Operators (Mostly Interactive)
             - Variables
@@ -85,7 +85,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - Fetch API
     
 
-- TypeScript ⏳
+- TypeScript 🚧
 
 - React ⏳
 
