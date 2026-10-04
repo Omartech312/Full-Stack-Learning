@@ -86,6 +86,8 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
     
 
 - TypeScript 🚧
+    - 
 
 - React ⏳
+    - 
 
