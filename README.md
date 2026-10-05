@@ -84,9 +84,9 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - JSON
             - Fetch API
 
-- TypeScript 🚧
+- TypeScript Fundamentals 🚧
     - 
 
-- React ⏳
+- React + TypeScript ⏳
     - 
 
