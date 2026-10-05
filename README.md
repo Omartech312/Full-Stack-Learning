@@ -83,7 +83,6 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
         - Data & APIs
             - JSON
             - Fetch API
-    
 
 - TypeScript 🚧
     - 
