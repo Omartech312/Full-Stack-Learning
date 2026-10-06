@@ -84,8 +84,11 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - JSON
             - Fetch API
 
-- TypeScript Fundamentals 🚧
-    - 
+- TypeScript (Basics) 🚧
+    - Fundamentals
+        - Built-in types
+        - any
+        - Arrays
 
 - React + TypeScript ⏳
     - 

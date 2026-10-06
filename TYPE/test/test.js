@@ -1,4 +1,0 @@
-"use strict";
-document.getElementById("button")?.addEventListener("click", () => {
-    console.log("Testing");
-});
