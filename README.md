@@ -89,6 +89,10 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
         - Built-in types
         - any
         - Arrays
+        - Tuples
+        - Enums
+        - Functions
+        - Objects
 
 - React + TypeScript ⏳
     - 
