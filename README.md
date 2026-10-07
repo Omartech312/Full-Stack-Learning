@@ -87,7 +87,6 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
 - TypeScript (Basics) 🚧
     - Fundamentals
         - Built-in types
-        - any
         - Arrays
         - Tuples
         - Enums

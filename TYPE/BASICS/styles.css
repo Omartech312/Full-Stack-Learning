@@ -11,3 +11,22 @@ h1 {
 h2 {
     color: rgb(96, 194, 233);
 }
+
+.listHead {
+    font-size: 1.2em;
+    color: rgb(236, 197, 112);
+}
+
+.column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+}
+
+.column > div {
+    width: 50%;
+}
+
+#careful {
+    color: rgb(252, 145, 145);
+}

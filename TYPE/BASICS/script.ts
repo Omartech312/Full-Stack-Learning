@@ -2,19 +2,24 @@
 // For example if you declare and init a variable it will automatically assume
 // the data type based on the given value
 
-// assumes number
-let sales = 123_456_789;
+// number
+//let sales = 123_456_789;
 
-// asumes string
-let course = `TypeScript`;
+// string
+//let course = `TypeScript`;
 
 //assumes boolean
-let check = true;
+//let check = true;
 
 // if you just declare without initializing it assumes type: any
-let level;
+//let level;
 
 // any represents any type of value which means it can be set to any data type
 // but it goes against the purpose of type script, so its best to use it as little as possible
-level = 1;
-level = 'a';
+//level = 1;
+//level = 'a';
+
+// =======================================================================
+// Arrays
+
+let numbers: number[] = [1,2,3];
