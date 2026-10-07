@@ -46,3 +46,19 @@ const tupOut = document.getElementById("tupleOut");
 if(tupOut){
     tupOut.innerHTML = `My name is ${author[0]} and I'm ${author[1]} years old`; 
 }
+
+// this looks similar to C
+const enum values { one, pi = 3.1416, e = 2.711828, logTwo = 0.69315 };
+
+const enumOut = document.getElementById("enumOut");
+
+if(enumOut){
+    enumOut.innerHTML = `My enum contains multiple important mathematical numbers such as: one ${values.one}, pi ${values.pi}, e ${values.e} and log2 ${values.logTwo}`;
+}
+
+// the enum name in needed to access its properties
+//console.log(values.one, values.pi);
+
+
+// lets the program the declaration above will belong to this file only instead of being shared among multiple .ts files
+export {};

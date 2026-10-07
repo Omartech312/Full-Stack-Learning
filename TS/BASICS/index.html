@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../CSS/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" defer></script>
     <title>TypeScript Fundamentals</title>
 </head>
 <body>
@@ -54,6 +54,13 @@
     <p>Tells the program it will store a string "Omar" and a number 22 in author. Where author[0] maps to "Omar" and author[1] to 22. This allows me to display such information</p>
     <p class="output" id="tupleOut"></p>
     <p id="issue">One Major issue with Tuples comes from the push() method which allows the entrance of values without specifying their data types</p>
+    <hr>
+
+    <h2>Enums</h2>
+    <p>Enums work similarly to C by defining a set of named constant values.</p>
+    <p class="output" id="enumOut"></p>
+    <p>The main difference is that C allows you to directly access the elements of an enum. While <span class="highlight">TypeScript enforce the use of the enum name (name.property)</span>.</p>
+    <hr>
 
     <div style="position: fixed; right: 1vw; top: 0px;"><h3><a href="../../home.html"> Return To Homepage</a></h3></div>
 </body>

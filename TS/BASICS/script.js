@@ -1,4 +1,3 @@
-"use strict";
 // You dont always have to annotate the data type of a variable
 // For example if you declare and init a variable it will automatically assume
 // the data type based on the given value
@@ -35,3 +34,9 @@ const tupOut = document.getElementById("tupleOut");
 if (tupOut) {
     tupOut.innerHTML = `My name is ${author[0]} and I'm ${author[1]} years old`;
 }
+;
+const enumOut = document.getElementById("enumOut");
+if (enumOut) {
+    enumOut.innerHTML = `My enum contains multiple important mathematical numbers such as: one ${0 /* values.one */}, pi ${3.1416 /* values.pi */}, e ${2.711828 /* values.e */} and log2 ${0.69315 /* values.logTwo */}`;
+}
+export {};
