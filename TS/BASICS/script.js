@@ -84,4 +84,11 @@ function tax(income) {
     console.log(taxes);
     return taxes;
 }
+// the enum name in needed to access its properties
+//console.log(values.one, values.pi);
+let employee = { id: 1, name: "Bryant" };
+const objOut = document.getElementById("objectOut");
+if (objOut) {
+    objOut.innerHTML = `The #${employee.id} employee of the month was ${employee.name}`;
+}
 export {};

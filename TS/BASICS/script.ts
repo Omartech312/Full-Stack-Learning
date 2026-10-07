@@ -114,7 +114,15 @@ function tax(income: number): number {
 }
 // the enum name in needed to access its properties
 //console.log(values.one, values.pi);
+let employee: {
+    readonly id: number,
+    name: string
+} = {id: 1, name: "Bryant"};
 
+const objOut = document.getElementById("objectOut");
+if(objOut){
+    objOut.innerHTML = `The #${employee.id} employee of the month was ${employee.name}`;
+}
 
 // lets the program the declaration above will belong to this file only instead of being shared among multiple .ts files
 export {};
