@@ -31,3 +31,18 @@ const arrayOut = document.getElementById("arrayOut");
 if(arrayOut){
     numbers.forEach(n => arrayOut.innerHTML += `${n.toExponential()}<br>`);
 }
+
+// ====================================
+// Tuple
+// they can be any size. Howver you must specify the data type
+let author: [string, number] = ["Omar", 22];
+console.log(author[0]);
+
+// This is one of the reknown issues of tubles in type Script. Even though I decleared a 2 value tuple Im pushing a third one without specifying the data type.
+author.push("Issue");
+
+const tupOut = document.getElementById("tupleOut");
+
+if(tupOut){
+    tupOut.innerHTML = `My name is ${author[0]} and I'm ${author[1]} years old`; 
+}

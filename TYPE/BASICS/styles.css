@@ -34,3 +34,17 @@ h2 {
 .highlight {
     color: rgb(255, 255, 154);
 }
+
+.output {
+    font-size: 1.1em;
+    text-shadow: 2px 2px 10px rgb(50, 252, 50), -2px -2px 5px rgb(255, 199, 108);
+    margin-top: 4px;
+    margin-bottom: 5px;
+    margin-left: 3px;
+}
+
+#issue {
+    margin-top: 25px;
+    font-size: 1.075em;
+    color: rgb(252, 145, 145);
+}
