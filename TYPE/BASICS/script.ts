@@ -22,4 +22,12 @@
 // =======================================================================
 // Arrays
 
-let numbers: number[] = [1,2,3];
+// one incredible feature typescript offers is displaying methods related to the data type
+let numbers: number[] = [12345,200000,342465];
+const arrayOut = document.getElementById("arrayOut");
+
+// for example since it knows numbers is an array of numbers when I write n. it provides me a list of methods
+// I can use related to numbers: .toExponential, toFixed, toPrecision, etc.
+if(arrayOut){
+    numbers.forEach(n => arrayOut.innerHTML += `${n.toExponential()}<br>`);
+}
