@@ -39,4 +39,15 @@ const enumOut = document.getElementById("enumOut");
 if (enumOut) {
     enumOut.innerHTML = `My enum contains multiple important mathematical numbers such as: one ${0 /* values.one */}, pi ${3.1416 /* values.pi */}, e ${2.711828 /* values.e */} and log2 ${0.69315 /* values.logTwo */}`;
 }
+document.getElementById("function")?.addEventListener("click", () => {
+    const funcOut = document.getElementById("funcOut");
+    if (funcOut) {
+        funcOut.innerHTML = thanks("user");
+    }
+});
+// similar to C when I specify the data types
+// C: char *thanks(char* display)
+function thanks(display) {
+    return `Thank you, ${display}`;
+}
 export {};

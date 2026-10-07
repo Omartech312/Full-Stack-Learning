@@ -56,6 +56,21 @@ if(enumOut){
     enumOut.innerHTML = `My enum contains multiple important mathematical numbers such as: one ${values.one}, pi ${values.pi}, e ${values.e} and log2 ${values.logTwo}`;
 }
 
+
+document.getElementById("function")?.addEventListener("click", () => {
+    const funcOut = document.getElementById("funcOut");
+
+    if(funcOut){
+        funcOut.innerHTML = thanks("user");
+    }
+})
+
+// similar to C when I specify the data types
+
+// C: char *thanks(char* display)
+function thanks(display: string): string {
+    return `Thank you, ${display}!`;
+}
 // the enum name in needed to access its properties
 //console.log(values.one, values.pi);
 
