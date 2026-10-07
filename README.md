@@ -92,6 +92,11 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
         - Enums
         - Functions
         - Objects
+    - Advanced TypeScript Types
+        - Type Aliases
+        - Union Types
+        - Intersection Types
+        - Literal Types
 
 - React + TypeScript ⏳
     - 
