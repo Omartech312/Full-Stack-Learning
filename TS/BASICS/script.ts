@@ -58,18 +58,59 @@ if(enumOut){
 
 
 document.getElementById("function")?.addEventListener("click", () => {
-    const funcOut = document.getElementById("funcOut");
+    console.log("enters");
+    // I will investigate more professional approaches for this later on
+    const input = document.getElementById("taxInput") as HTMLInputElement;
+    let income: number;
+    if(input){
+        console.log("passes");
+        income = Number(input.value);
+        
+        const funcOut = document.getElementById("funcOut");
 
-    if(funcOut){
-        funcOut.innerHTML = thanks("user");
+        if(funcOut){
+            console.log("gets to tax");
+            funcOut.innerHTML = `Your tax to pay is $${tax(income)}`;
+        }
     }
-})
+});
 
 // similar to C when I specify the data types
 
 // C: char *thanks(char* display)
-function thanks(display: string): string {
-    return `Thank you, ${display}!`;
+function tax(income: number): number {
+    console.log(income);
+    let result: number = income;
+
+    // Standard deduction for 2026
+    if(result <= 16_100){
+        return 0;
+    }
+
+    result -= 16_100;
+
+    let brackets: number[] = [12_400, 38_000, 55_300, 96_075, 54_450, 384_375];
+    let rates: number[] = [0.10, 0.12, 0.22, 0.24, 0.32, 0.35];
+    let taxes: number = 0;
+
+    for(let i = 0; i < brackets.length && result > 0; i++){
+
+        if (result <= brackets[i]){
+            taxes += result * rates[i];
+            result = 0;
+        }
+        else{
+            taxes += brackets[i] * rates[i];
+            result -= brackets[i];
+        }
+    }
+
+    // anything else gets .37 rate
+    if (result > 0){
+        taxes += result * 0.37;
+    }
+    console.log(taxes);
+    return taxes;
 }
 // the enum name in needed to access its properties
 //console.log(values.one, values.pi);

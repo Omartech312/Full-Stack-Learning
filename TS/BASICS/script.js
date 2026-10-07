@@ -40,14 +40,48 @@ if (enumOut) {
     enumOut.innerHTML = `My enum contains multiple important mathematical numbers such as: one ${0 /* values.one */}, pi ${3.1416 /* values.pi */}, e ${2.711828 /* values.e */} and log2 ${0.69315 /* values.logTwo */}`;
 }
 document.getElementById("function")?.addEventListener("click", () => {
-    const funcOut = document.getElementById("funcOut");
-    if (funcOut) {
-        funcOut.innerHTML = thanks("user");
+    console.log("enters");
+    // I will investigate more professional approaches for this later on
+    const input = document.getElementById("taxInput");
+    let income;
+    if (input) {
+        console.log("passes");
+        income = Number(input.value);
+        const funcOut = document.getElementById("funcOut");
+        if (funcOut) {
+            console.log("gets to tax");
+            funcOut.innerHTML = `Your tax to pay is $${tax(income)}`;
+        }
     }
 });
 // similar to C when I specify the data types
 // C: char *thanks(char* display)
-function thanks(display) {
-    return `Thank you, ${display}`;
+function tax(income) {
+    console.log(income);
+    let result = income;
+    // Standard deduction for 2026
+    if (result <= 16100) {
+        return 0;
+    }
+    result -= 16100;
+    let brackets = [12400, 38000, 55300, 96075, 54450, 384375];
+    let rates = [0.10, 0.12, 0.22, 0.24, 0.32, 0.35];
+    let taxes = 0;
+    for (let i = 0; i < brackets.length && result > 0; i++) {
+        if (result <= brackets[i]) {
+            taxes += result * rates[i];
+            result = 0;
+        }
+        else {
+            taxes += brackets[i] * rates[i];
+            result -= brackets[i];
+        }
+    }
+    // anything else gets .37 rate
+    if (result > 0) {
+        taxes += result * 0.37;
+    }
+    console.log(taxes);
+    return taxes;
 }
 export {};
