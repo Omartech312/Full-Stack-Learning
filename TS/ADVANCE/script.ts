@@ -66,4 +66,15 @@ if(interOut){
     interOut.innerHTML = `${worker1.name} is ${worker1.age} working as a ${worker1.job} with a salary ${worker1.salary}`;
 }
 
+type Metric = 'cm' | 'inch';
+let unit: Metric = 'cm';
+
+const litOut = document.getElementById("litOut");
+if(litOut){
+    litOut.innerHTML = `You can measure objects in ${unit}`;
+    unit = 'inch';
+    litOut.innerHTML += ` or ${unit}`;
+}
+
+
 export {};

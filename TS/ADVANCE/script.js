@@ -38,4 +38,11 @@ const interOut = document.getElementById("interOut");
 if (interOut) {
     interOut.innerHTML = `${worker1.name} is ${worker1.age} working as a ${worker1.job} with a salary ${worker1.salary}`;
 }
+let unit = 'cm';
+const litOut = document.getElementById("litOut");
+if (litOut) {
+    litOut.innerHTML = `You can measure objects in ${unit}`;
+    unit = 'inch';
+    litOut.innerHTML += ` or ${unit}`;
+}
 export {};
