@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    color: rgb(0, 182, 254);
+    text-align: center;
+}
+
+h2 {
+    color: rgb(96, 194, 233);
+}
+
+.careful {
+    color: rgb(255, 131, 131);
+}
+
+.output {
+    font-size: 1.1em;
+    text-shadow: 2px 2px 20px rgb(115, 249, 177), -2px -2px 20px rgb(255, 189, 127);
+    margin-top: 4px;
+    margin-bottom: 5px;
+    margin-left: 3px;
+}
