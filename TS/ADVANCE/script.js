@@ -1,4 +1,3 @@
-"use strict";
 let employee = {
     id: 1,
     name: 'Bryant',
@@ -29,3 +28,14 @@ document.getElementById("conButton")?.addEventListener("click", () => {
         output.innerHTML = `${weight}kg is equivalent to ${kgToLbs(weight).toPrecision(2)} lbs`;
     }
 });
+const worker1 = {
+    name: "John",
+    age: 25,
+    job: "Software Developer",
+    salary: 85000
+};
+const interOut = document.getElementById("interOut");
+if (interOut) {
+    interOut.innerHTML = `${worker1.name} is ${worker1.age} working as a ${worker1.job} with a salary ${worker1.salary}`;
+}
+export {};
