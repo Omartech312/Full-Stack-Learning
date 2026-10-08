@@ -97,6 +97,8 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
         - Union Types
         - Intersection Types
         - Literal Types
+        - Nullable Types
+        - Optional Chaining
 
 - React + TypeScript ⏳
     - 
