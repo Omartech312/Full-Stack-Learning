@@ -66,6 +66,7 @@ if(interOut){
     interOut.innerHTML = `${worker1.name} is ${worker1.age} working as a ${worker1.job} with a salary ${worker1.salary}`;
 }
 
+// Literal Types
 type Metric = 'cm' | 'inch';
 let unit: Metric = 'cm';
 
@@ -75,6 +76,8 @@ if(litOut){
     unit = 'inch';
     litOut.innerHTML += ` or ${unit}`;
 }
+
+// Nullable Types
 
 
 export {};
