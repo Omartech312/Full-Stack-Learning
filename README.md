@@ -84,7 +84,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
             - JSON
             - Fetch API
 
-- TypeScript (Basics) 🚧
+- TypeScript (Basics) ✅
     - Fundamentals
         - Built-in types
         - Arrays
@@ -97,9 +97,12 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
         - Union Types
         - Intersection Types
         - Literal Types
-        - Nullable Types
         - Optional Chaining
 
-- React + TypeScript ⏳
-    - 
+- React + TypeScript 🚧
+    - Fundamentals
+        - Card Components
+        - Adding CSS
+        - Conditional rendering
+        - render lists
 
