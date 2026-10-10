@@ -25,3 +25,13 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(186, 186, 186);
 }
+
+/* This is considered external CSS, this can lead to naming conflicts */
+.Button {
+    background-color: hsl(15, 58%, 60%);
+    color: white;
+    padding: 20px 40px;
+    border: 4px double rgb(78, 78, 78);
+    cursor: pointer;
+    border-radius: 10px;
+}
