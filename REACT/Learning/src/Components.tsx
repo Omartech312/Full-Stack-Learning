@@ -45,3 +45,20 @@ export function LineButton(){
     );
 }
 
+//defining type personProp
+type personProp = {
+    name: string;
+    age: number;
+    status: boolean;
+};
+
+// function takes a prop object
+export function Person(prop: personProp){
+    return(
+        <div className='person'>
+            <p>Name: {prop.name}</p>
+            <p>Age: {prop.age}</p>
+            <p>Student: {prop.status ? "Yes" : "No"}</p>
+        </div>
+    );
+}

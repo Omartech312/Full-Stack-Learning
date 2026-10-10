@@ -27,11 +27,20 @@
 }
 
 /* This is considered external CSS, this can lead to naming conflicts */
-.Button {
+.Button{
     background-color: hsl(15, 58%, 60%);
     color: white;
     padding: 20px 40px;
     border: 4px double rgb(78, 78, 78);
     cursor: pointer;
     border-radius: 10px;
+}
+
+.person{
+    border: 2px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: rgb(199, 199, 199);
+    margin: 20px;
 }

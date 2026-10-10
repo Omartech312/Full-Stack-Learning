@@ -1,16 +1,19 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import {Card, ExtButton, ModButton, LineButton} from './Components.tsx'
+import {Card, ExtButton, ModButton, LineButton, Person} from './Components.tsx'
 
 createRoot(document.getElementById('root')!).render(
 
     // if you want to have multiple JSX element you have to use fragments
+
+    // name, age and status in Person will be used for the Prop
     <>
       <Card />
       <Card />
       <ExtButton />
       <ModButton />
       <LineButton />
+      <Person name="Bobby" age={16} status={true} />
     </>
 )
