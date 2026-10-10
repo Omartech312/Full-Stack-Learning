@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import Card from './Card.tsx'
+import {Card, ExtButton, ModButton, LineButton} from './Components.tsx'
 
 createRoot(document.getElementById('root')!).render(
 
@@ -9,5 +9,8 @@ createRoot(document.getElementById('root')!).render(
     <>
       <Card />
       <Card />
+      <ExtButton />
+      <ModButton />
+      <LineButton />
     </>
 )

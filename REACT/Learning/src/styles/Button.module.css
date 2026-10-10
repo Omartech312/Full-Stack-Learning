@@ -1,0 +1,9 @@
+/*This is styling with modules*/
+.Button {
+    background-color: hsl(200, 97%, 72%);
+    color: white;
+    padding: 20px 40px;
+    border: 4px double rgb(78, 78, 78);
+    cursor: pointer;
+    border-radius: 10px;
+}
