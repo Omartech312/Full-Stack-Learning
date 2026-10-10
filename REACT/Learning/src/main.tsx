@@ -9,11 +9,17 @@ createRoot(document.getElementById('root')!).render(
 
     // name, age and status in Person will be used for the Prop
     <>
+      <h2>Components</h2>
       <Card />
       <Card />
+      <hr></hr>
+      <h2>Styles</h2>
       <ExtButton />
       <ModButton />
       <LineButton />
-      <Person name="Bobby" age={16} status={true} />
+      <hr></hr>
+      <h2>Props</h2>
+      <Person name="Bobby" age={13} status={true} />
+      <Person name="Hank" age={34} status={false} />
     </>
 )
