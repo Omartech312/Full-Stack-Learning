@@ -82,3 +82,20 @@ export function Person({
         </div>
     );
 }
+
+type user = {
+    name?: string;
+    loggedIn: boolean;
+}
+
+export function DisplayLog(prop: user){
+    const logged = <h2 className='logged'>
+                    Welcome {prop.name}
+                    </h2>
+
+    const off = <h2>Please Log In</h2>
+
+    return(
+        prop.loggedIn ? logged : off
+    );
+}
