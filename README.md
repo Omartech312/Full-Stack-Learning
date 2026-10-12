@@ -101,8 +101,9 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
 
 - React + TypeScript 🚧
     - Fundamentals
-        - Card Components
+        - Components
         - Adding CSS
+        - Props
         - Conditional rendering
         - render lists
 

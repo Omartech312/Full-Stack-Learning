@@ -8,6 +8,8 @@ createRoot(document.getElementById('root')!).render(
     // if you want to have multiple JSX element you have to use fragments
 
     // name, age and status in Person will be used for the Prop
+
+    // Last element is using defaultProp
     <>
       <h2>Components</h2>
       <Card />
@@ -21,5 +23,6 @@ createRoot(document.getElementById('root')!).render(
       <h2>Props</h2>
       <Person name="Bobby" age={13} status={true} />
       <Person name="Hank" age={34} status={false} />
+      <Person /> 
     </>
 )

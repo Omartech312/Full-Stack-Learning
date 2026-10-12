@@ -46,6 +46,7 @@ export function LineButton(){
 }
 
 //defining type personProp
+// since Im using TypeScript this is necessary to provide the data type in person func
 type personProp = {
     name: string;
     age: number;
@@ -53,12 +54,31 @@ type personProp = {
 };
 
 // function takes a prop object
+
+/*
 export function Person(prop: personProp){
     return(
-        <div className='person'>
+        <div className='person'>         
             <p>Name: {prop.name}</p>
             <p>Age: {prop.age}</p>
             <p>Student: {prop.status ? "Yes" : "No"}</p>
+        </div>
+    );
+}
+*/
+
+// here im using defaultProp
+export function Person({
+    name = "Guest",
+    age = -1,
+    status = false
+}: personProp){
+    return(
+        <div className='person'>
+            
+            <p>Name: {name}</p>
+            <p>Age Category: {age >= 0 ? age >= 18 ? "Adult" : "Minor" : "Unknown"}</p>
+            <p>Student: {status ? "Yes" : "No"}</p>
         </div>
     );
 }
