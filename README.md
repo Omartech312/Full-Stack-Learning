@@ -105,5 +105,7 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
         - Adding CSS
         - Props
         - Conditional rendering
-        - render lists
-
+        - Render lists
+        - Click events
+        - useState() hook
+        - onChange event handler
