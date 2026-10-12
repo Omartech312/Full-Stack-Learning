@@ -99,3 +99,21 @@ export function DisplayLog(prop: user){
         prop.loggedIn ? logged : off
     );
 }
+
+// list of objects with animals and their respective max speed
+const list = [
+    {id:1, name: "Cheetah", speed: 65},
+    {id:2, name: "Pronghorn", speed: 55},
+    {id:3, name: "Springbok", speed: 55},
+    {id:4, name: "Gazelle", speed: 50},
+    {id:5, name: "Lion", speed: 50}]
+
+export function DisplayList(){
+    const items = list.map(element => <li key={element.id} className='listElement'>{element.name}: Speed: {element.speed}</li>)
+
+    return(<>
+        <ol>
+            {items}
+        </ol>
+    </>);
+}

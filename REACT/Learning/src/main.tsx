@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import {Card, ExtButton, ModButton, LineButton, Person, DisplayLog} from './Components.tsx'
+import {Card, ExtButton, ModButton, LineButton, Person, DisplayLog, DisplayList} from './Components.tsx'
 
 createRoot(document.getElementById('root')!).render(
 
@@ -27,6 +27,9 @@ createRoot(document.getElementById('root')!).render(
       <hr></hr>
       <h2>Conditional Rendering</h2>
       <DisplayLog name="George" loggedIn={true} />
+      <hr></hr>
+      <h2>Rendering List</h2>
+      <DisplayList />
       
     </>
 )
