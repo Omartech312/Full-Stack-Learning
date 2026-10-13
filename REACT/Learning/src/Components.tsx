@@ -2,6 +2,7 @@ import musashiPic from './assets/musashi.jpg';
 import redButton from './assets/click.jpg'
 import './Components.css';
 import styles from './styles/Button.module.css';
+import { useState } from 'react';
 
 // using export like this allows for multiple exports instead of one as shown in the default
 export function Card(){
@@ -126,4 +127,33 @@ export function RemovePic(){
 
     //image with onClick Property connected to click(e) where e is the img itself
     return(<img className='removeButton' onClick={(e) => click(e)} src={redButton}></img>)
+}
+
+//React hooks allow functional components to use react features without writing class components
+//  useState, useEffect, useContext, usereducer, useCallback
+
+// userState() is a hook that allows the creation of stateful variables and a setter function to update its value
+// in the virtual DOM [name, setName]
+
+export function Hooks(){
+    const [count, setCount] = useState(0);
+
+    const add = () => {
+        setCount(count + 1);
+    }
+    
+    const sub = () => {
+        setCount(count - 1);
+    }
+
+    const reset = () => {
+        setCount(0);
+    }
+
+    return(<div className='counter'>
+        <p className='count'>{count}</p>
+        <button className='sub' onClick={sub}>Decrement</button>
+        <button className='reset' onClick={reset}>Reset</button>
+        <button className='add' onClick={add}>Increment</button>
+    </div>);
 }
