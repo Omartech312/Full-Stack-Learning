@@ -107,5 +107,10 @@ Icons: ✅ Completed, 🚧 In Progress, ⏳ Not Started
         - Conditional rendering
         - Render lists
         - Click events
+    - State Management & Interactions
         - useState() hook
         - onChange event handler
+        - updater functions
+        - update Objects
+        - update Arrays
+        - update Array of Objects
