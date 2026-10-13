@@ -52,7 +52,27 @@
     border-radius: 5px;
 }
 
+.counter{
+    text-align: center;
+    background-color: rgb(181, 180, 180);
+    display: inline-block;
+    border-radius: 5px;
+}
+
 .removeButton{
-    width: 250px;
     height: 250px;
+}
+
+.add{
+    background-color: lightgreen;
+    min-width: 100px;
+}
+
+.sub{
+    background-color: rgb(242, 135, 128);
+    min-width: 100px;
+}
+
+.count{
+    font-size: 1.5em;
 }
