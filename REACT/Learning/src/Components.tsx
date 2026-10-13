@@ -157,3 +157,24 @@ export function Hooks(){
         <button className='add' onClick={add}>Increment</button>
     </div>);
 }
+
+export function OnChange(){
+    // sets the initial text to Guest and destructures useState into text and setter
+    const [text, setText] = useState("Guest");
+
+    // function to set the text to whatever is within the input box
+    function handleChange(event: any){
+        setText(event.target.value);
+    }
+
+    return(
+    <div>
+        <p>Feel free to change this to your desired username. The moment one change is detected it will automatically be reflected below</p>
+        <div className='greet'>
+            {/*When a change is detected it calls handleChange function which sets the text to whatever text is within this cell */}
+            <input value={text} className='greetButton' onChange={handleChange} ></input>
+            {/*Displays the text*/}
+            <p className='welcome'>Welcome {text}</p>
+        </div>
+    </div>);
+}
