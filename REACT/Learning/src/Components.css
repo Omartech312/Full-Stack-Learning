@@ -51,3 +51,8 @@
     background-color: skyblue;
     border-radius: 5px;
 }
+
+.removeButton{
+    width: 250px;
+    height: 250px;
+}

@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import {Card, ExtButton, ModButton, LineButton, Person, DisplayLog, DisplayList} from './Components.tsx'
+import {Card, ExtButton, ModButton, LineButton, Person, DisplayLog, DisplayList, RemovePic} from './Components.tsx'
 
 createRoot(document.getElementById('root')!).render(
 
@@ -30,6 +30,9 @@ createRoot(document.getElementById('root')!).render(
       <hr></hr>
       <h2>Rendering List</h2>
       <DisplayList />
+      <hr></hr>
+      <h2>Click Events</h2>
+      <RemovePic />
       
     </>
 )

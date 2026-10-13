@@ -1,4 +1,5 @@
 import musashiPic from './assets/musashi.jpg';
+import redButton from './assets/click.jpg'
 import './Components.css';
 import styles from './styles/Button.module.css';
 
@@ -112,8 +113,17 @@ export function DisplayList(){
     const items = list.map(element => <li key={element.id} className='listElement'>{element.name}: Speed: {element.speed}</li>)
 
     return(<>
+        <h3>Fastest Land Animals</h3>
         <ol>
             {items}
         </ol>
     </>);
+}
+
+export function RemovePic(){
+    // when the image is clicked the display is set to "none"
+    const click = (e: any) => e.target.style.display = "none";
+
+    //image with onClick Property connected to click(e) where e is the img itself
+    return(<img className='removeButton' onClick={(e) => click(e)} src={redButton}></img>)
 }
