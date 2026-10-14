@@ -188,6 +188,8 @@ export function Updater(){
         setScore(score + 1);
     }
     function updaterFunc(){
+        // Its good practice to use updater functions
+        // for future proof
         setScore(prevScore => prevScore + 1);
         setScore(prevScore => prevScore + 1);
     }
@@ -210,4 +212,42 @@ export function Updater(){
             <p>React batches state updates meaning having setScore(score + 1) is basically like doing score = 0 + 1 twice. While functional state actually adds 1 on the furest setScore() followed by a second +1.</p>
         </div>
     );
+}
+
+class Car{
+    model: string;
+    make: string;
+    year: number;
+
+    constructor(make: string, model: string, year: number){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+}
+
+export function UpdateObject(){
+    const [car, setCar] = useState(new Car("Chevrolet", "Silverado", 2025));
+
+    function changeMake(event: any){
+        setCar(prevCar => ({...prevCar, make: event.target.value}) )
+    }
+
+    function changeModel(event: any){
+        setCar(prevCar => ({...prevCar, model: event.target.value}))
+    }
+
+    function changeYear(event: any){
+        const newYear = Number(event.target.value);
+        setCar(prevCar => ({...prevCar, year: newYear}))
+    }
+
+    return(<div className='carSection'>
+        <p>Feel free to modify to your favorite Car</p>
+        <input placeholder='Make' type='text' value={car.make} onChange={changeMake}></input>
+        <input placeholder='Model' type='text' value={car.model} onChange={changeModel}></input>
+        <input placeholder='Year' type='number' value={car.year} onChange={changeYear}></input>
+
+        <p className='output'>Your Favorite Car is {car.make}, {car.model} year {car.year}</p>
+    </div>);
 }
