@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import {Card, ExtButton, ModButton, LineButton, Person, DisplayLog, DisplayList, RemovePic, Hooks, OnChange, 
-  Updater, UpdateObject, UpdateArray} from './Components.tsx'
+  Updater, UpdateObject, UpdateArray, objectArray} from './Components.tsx'
 
 createRoot(document.getElementById('root')!).render(
 
@@ -49,6 +49,8 @@ createRoot(document.getElementById('root')!).render(
       <hr></hr>
       <h2>Update Array</h2>
       <UpdateArray />
-
+      <hr></hr>
+      <h2>Update Array of Objects</h2>
+      <objectArray />
     </>
 )
