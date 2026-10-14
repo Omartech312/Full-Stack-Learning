@@ -251,3 +251,33 @@ export function UpdateObject(){
         <p className='output'>Your Favorite Car is {car.make}, {car.model} year {car.year}</p>
     </div>);
 }
+
+export function UpdateArray(){
+    const [animals, setAnimals] = useState(["Lion", "Cheetah"]);
+
+    function addAnimal(){
+        const newAnimal = (document.getElementById("newAnimal") as HTMLInputElement).value;
+        (document.getElementById("newAnimal") as HTMLInputElement).value = "";
+        if(newAnimal){
+            setAnimals(prevAnimals => [...prevAnimals, newAnimal]);
+        }
+    }
+
+    function removeElement(removeIndex: Number){
+        setAnimals(animals.filter((_, i) => i !== removeIndex));
+    }
+
+    return(
+    <div className='animalSec'>
+        <p className='animalHead'>List of Animals:</p>
+        <ul>
+            {animals.map((animal, index) => 
+                <li key={index} onClick={() => removeElement(index)}>
+                    {animal}
+                </li>)}
+        </ul>
+        <input id="newAnimal" type='text' placeholder='Enter Animal Names'></input>
+        <button onClick={addAnimal}>Submit</button>
+    </div>
+    );
+}

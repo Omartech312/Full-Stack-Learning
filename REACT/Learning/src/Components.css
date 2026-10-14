@@ -124,3 +124,19 @@
 .carSection input{
     margin: 3px;
 }
+
+.animalSec{
+    background-color: rgb(213, 194, 252);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.animalHead{
+    font-size: 1.3em;
+}
+
+.animalSec li:hover{
+    cursor: pointer;
+    color: rgb(249, 71, 71);
+}
