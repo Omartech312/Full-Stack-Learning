@@ -1,5 +1,6 @@
 import musashiPic from './assets/musashi.jpg';
-import redButton from './assets/click.jpg'
+import redButton from './assets/click.jpg';
+import functions from './assets/updater.png';
 import './Components.css';
 import styles from './styles/Button.module.css';
 import { useState } from 'react';
@@ -177,4 +178,36 @@ export function OnChange(){
             <p className='welcome'>Welcome {text}</p>
         </div>
     </div>);
+}
+
+export function Updater(){
+    const [score, setScore] = useState(0);
+
+    function direct(){
+        setScore(score + 1);
+        setScore(score + 1);
+    }
+    function updaterFunc(){
+        setScore(prevScore => prevScore + 1);
+        setScore(prevScore => prevScore + 1);
+    }
+    
+    function reset(){
+        setScore(0);
+    }
+
+    return(
+        <div>
+            <p>Both buttons call setScore to increment the score by 1 twice</p>
+            <img className='update' src={functions}></img>
+
+            <div className='comparason'>
+                <p className='updaterScore'>Score: {score}</p>
+                <button onClick={reset}>Reset</button>
+                <button onClick={direct}>Direct State</button>
+                <button onClick={updaterFunc}>Functional State</button>
+            </div>
+            <p>React batches state updates meaning having setScore(score + 1) is basically like doing score = 0 + 1 twice. While functional state actually adds 1 on the furest setScore() followed by a second +1.</p>
+        </div>
+    );
 }

@@ -88,3 +88,21 @@
     color: white;
     font-size: 1.5em;
 }
+
+.comparason{
+    background-color: skyblue;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.updaterScore{
+    font-size: 1.6em;
+}
+
+.update{
+    height: 150px;
+    display: block;
+    margin-bottom: 10px;
+}
