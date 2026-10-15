@@ -297,17 +297,27 @@ class Fruit{
 
 export function ObjectArray(){
     const [fruits, setFruits] = useState([new Fruit(0, "Banana", 105), new Fruit(1, "Apple", 95)]);
+    
+    const [name, setName] = useState("");
+    const [calories, setCalories] = useState("");
 
     const nextId = useRef(2);
 
     function addFruit(){
-        const name = (document.getElementById("newFruit") as HTMLInputElement).value;
-        const calories = (document.getElementById("calories") as HTMLInputElement).value;
-        (document.getElementById("newFruit") as HTMLInputElement).value = "";
-        (document.getElementById("calories") as HTMLInputElement).value = "";
+        // values are now saved in name and calories instead of pulling from DOM
+
+        //if both the name and calories are empty then we do not add anything by simply returning
+        if(name.trim() === "" || calories.trim() === ""){
+            return;
+        }
+        
         const id = nextId.current++;
 
         setFruits(prevFruits => [...prevFruits, new Fruit(id, name, Number(calories))]);
+
+        // empties the input containers for the next fruit
+        setName("");
+        setCalories("");
     }
 
     function removeObject(id: number){
@@ -323,10 +333,13 @@ export function ObjectArray(){
         </ul>
 
         <label htmlFor="newFruit">Fruit Name:</label>
-        <input placeholder='Enter Fruit Name' id="newFruit" type='text'></input>
+        <input placeholder='Enter Fruit Name' id="newFruit" type='text' value={name}
+        onChange={e => setName(e.target.value)}></input>
         <br></br>
+
         <label htmlFor="calories">Calories ct: </label>
-        <input placeholder='Enter Calorie Count' id='calories' type='number'></input><br></br>
+        <input placeholder='Enter Calorie Count' id='calories' type='number' value={calories}
+        onChange={e => setCalories(e.target.value)}></input><br></br>
         <button onClick={addFruit}>Submit</button>
     </div>);
 }
