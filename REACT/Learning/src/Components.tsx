@@ -3,7 +3,7 @@ import redButton from './assets/click.jpg';
 import functions from './assets/updater.png';
 import './Components.css';
 import styles from './styles/Button.module.css';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 // using export like this allows for multiple exports instead of one as shown in the default
 export function Card(){
@@ -298,25 +298,27 @@ class Fruit{
 export function ObjectArray(){
     const [fruits, setFruits] = useState([new Fruit(0, "Banana", 105), new Fruit(1, "Apple", 95)]);
 
+    const nextId = useRef(2);
+
     function addFruit(){
         const name = (document.getElementById("newFruit") as HTMLInputElement).value;
         const calories = (document.getElementById("calories") as HTMLInputElement).value;
         (document.getElementById("newFruit") as HTMLInputElement).value = "";
         (document.getElementById("calories") as HTMLInputElement).value = "";
+        const id = nextId.current++;
 
-        setFruits(prevFruits => [...prevFruits, new Fruit(fruits.length, name, Number(calories))]);
+        setFruits(prevFruits => [...prevFruits, new Fruit(id, name, Number(calories))]);
     }
 
-    function removeObject(index: number){
-        setFruits(fruits.filter((_, i) => i !== index));
-        console.log(fruits);
+    function removeObject(id: number){
+    setFruits(prevFruit => prevFruit.filter(fruit => fruit.id !== id));
     }
 
     return(<div className='fruits'>
         <p className='fruitTitle'>List of Fruits with Calories:</p>
         <ul>
-            {fruits.map((fruit, index) => 
-                <li onClick={() => removeObject(index)} key={fruit.id}>{fruit.name}: {fruit.calories} Calories</li>
+            {fruits.map(fruit => 
+                <li onClick={() => removeObject(fruit.id)} key={fruit.id}>{fruit.name}: {fruit.calories} Calories</li>
             )}
         </ul>
 
