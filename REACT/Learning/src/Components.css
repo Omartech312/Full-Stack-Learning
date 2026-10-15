@@ -139,4 +139,22 @@
 .animalSec li:hover{
     cursor: pointer;
     color: rgb(249, 71, 71);
+    font-size: 1.2em;
+}
+
+.fruits li:hover{
+    cursor: pointer;
+    color: rgb(249, 71, 71);
+    font-size: 1.2em;
+}
+
+.fruits{
+    background-color: rgb(241, 200, 124);
+    padding: 15px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.fruitTitle{
+    font-size: 1.5em;
 }

@@ -282,7 +282,49 @@ export function UpdateArray(){
     );
 }
 
-export function objectArray(){
+class Fruit{
+    id: number;
+    name: string;
+    calories: number;
 
-    return();
+    constructor(id: number, name: string, calories: number){
+        this.id = id;
+        this.name = name;
+        this.calories = calories;
+    }
+
+}
+
+export function ObjectArray(){
+    const [fruits, setFruits] = useState([new Fruit(0, "Banana", 105), new Fruit(1, "Apple", 95)]);
+
+    function addFruit(){
+        const name = (document.getElementById("newFruit") as HTMLInputElement).value;
+        const calories = (document.getElementById("calories") as HTMLInputElement).value;
+        (document.getElementById("newFruit") as HTMLInputElement).value = "";
+        (document.getElementById("calories") as HTMLInputElement).value = "";
+
+        setFruits(prevFruits => [...prevFruits, new Fruit(fruits.length, name, Number(calories))]);
+    }
+
+    function removeObject(index: number){
+        setFruits(fruits.filter((_, i) => i !== index));
+        console.log(fruits);
+    }
+
+    return(<div className='fruits'>
+        <p className='fruitTitle'>List of Fruits with Calories:</p>
+        <ul>
+            {fruits.map((fruit, index) => 
+                <li onClick={() => removeObject(index)} key={fruit.id}>{fruit.name}: {fruit.calories} Calories</li>
+            )}
+        </ul>
+
+        <label htmlFor="newFruit">Fruit Name:</label>
+        <input placeholder='Enter Fruit Name' id="newFruit" type='text'></input>
+        <br></br>
+        <label htmlFor="calories">Calories ct: </label>
+        <input placeholder='Enter Calorie Count' id='calories' type='number'></input><br></br>
+        <button onClick={addFruit}>Submit</button>
+    </div>);
 }
