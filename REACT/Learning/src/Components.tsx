@@ -1,8 +1,9 @@
 import musashiPic from './assets/musashi.jpg';
-import redButton from './assets/click.jpg'
+import redButton from './assets/click.jpg';
+import functions from './assets/updater.png';
 import './Components.css';
 import styles from './styles/Button.module.css';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 // using export like this allows for multiple exports instead of one as shown in the default
 export function Card(){
@@ -176,5 +177,156 @@ export function OnChange(){
             {/*Displays the text*/}
             <p className='welcome'>Welcome {text}</p>
         </div>
+    </div>);
+}
+
+export function Updater(){
+    const [score, setScore] = useState(0);
+
+    function direct(){
+        setScore(score + 1);
+        setScore(score + 1);
+    }
+    function updaterFunc(){
+        // Its good practice to use updater functions
+        // for future proof
+        setScore(prevScore => prevScore + 1);
+        setScore(prevScore => prevScore + 1);
+    }
+    
+    function reset(){
+        setScore(0);
+    }
+
+    return(
+        <div>
+            <p>Both buttons call setScore to increment the score by 1 twice</p>
+            <img className='update' src={functions}></img>
+
+            <div className='comparason'>
+                <p className='updaterScore'>Score: {score}</p>
+                <button onClick={reset}>Reset</button>
+                <button onClick={direct}>Direct State</button>
+                <button onClick={updaterFunc}>Functional State</button>
+            </div>
+            <p>React batches state updates meaning having setScore(score + 1) is basically like doing score = 0 + 1 twice. While functional state actually adds 1 on the furest setScore() followed by a second +1.</p>
+        </div>
+    );
+}
+
+class Car{
+    model: string;
+    make: string;
+    year: number;
+
+    constructor(make: string, model: string, year: number){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+}
+
+export function UpdateObject(){
+    const [car, setCar] = useState(new Car("Chevrolet", "Silverado", 2025));
+
+    function changeMake(event: any){
+        setCar(prevCar => ({...prevCar, make: event.target.value}) )
+    }
+
+    function changeModel(event: any){
+        setCar(prevCar => ({...prevCar, model: event.target.value}))
+    }
+
+    function changeYear(event: any){
+        const newYear = Number(event.target.value);
+        setCar(prevCar => ({...prevCar, year: newYear}))
+    }
+
+    return(<div className='carSection'>
+        <p>Feel free to modify to your favorite Car</p>
+        <input placeholder='Make' type='text' value={car.make} onChange={changeMake}></input>
+        <input placeholder='Model' type='text' value={car.model} onChange={changeModel}></input>
+        <input placeholder='Year' type='number' value={car.year} onChange={changeYear}></input>
+
+        <p className='output'>Your Favorite Car is {car.make}, {car.model} year {car.year}</p>
+    </div>);
+}
+
+export function UpdateArray(){
+    const [animals, setAnimals] = useState(["Lion", "Cheetah"]);
+
+    function addAnimal(){
+        const newAnimal = (document.getElementById("newAnimal") as HTMLInputElement).value;
+        (document.getElementById("newAnimal") as HTMLInputElement).value = "";
+        if(newAnimal){
+            setAnimals(prevAnimals => [...prevAnimals, newAnimal]);
+        }
+    }
+
+    function removeElement(removeIndex: Number){
+        setAnimals(animals.filter((_, i) => i !== removeIndex));
+    }
+
+    return(
+    <div className='animalSec'>
+        <p className='animalHead'>List of Animals:</p>
+        <ul>
+            {animals.map((animal, index) => 
+                <li key={index} onClick={() => removeElement(index)}>
+                    {animal}
+                </li>)}
+        </ul>
+        <input id="newAnimal" type='text' placeholder='Enter Animal Names'></input>
+        <button onClick={addAnimal}>Submit</button>
+    </div>
+    );
+}
+
+class Fruit{
+    id: number;
+    name: string;
+    calories: number;
+
+    constructor(id: number, name: string, calories: number){
+        this.id = id;
+        this.name = name;
+        this.calories = calories;
+    }
+
+}
+
+export function ObjectArray(){
+    const [fruits, setFruits] = useState([new Fruit(0, "Banana", 105), new Fruit(1, "Apple", 95)]);
+
+    const nextId = useRef(2);
+
+    function addFruit(){
+        const name = (document.getElementById("newFruit") as HTMLInputElement).value;
+        const calories = (document.getElementById("calories") as HTMLInputElement).value;
+        (document.getElementById("newFruit") as HTMLInputElement).value = "";
+        (document.getElementById("calories") as HTMLInputElement).value = "";
+        const id = nextId.current++;
+
+        setFruits(prevFruits => [...prevFruits, new Fruit(id, name, Number(calories))]);
+    }
+
+    function removeObject(id: number){
+    setFruits(prevFruit => prevFruit.filter(fruit => fruit.id !== id));
+    }
+
+    return(<div className='fruits'>
+        <p className='fruitTitle'>List of Fruits with Calories:</p>
+        <ul>
+            {fruits.map(fruit => 
+                <li onClick={() => removeObject(fruit.id)} key={fruit.id}>{fruit.name}: {fruit.calories} Calories</li>
+            )}
+        </ul>
+
+        <label htmlFor="newFruit">Fruit Name:</label>
+        <input placeholder='Enter Fruit Name' id="newFruit" type='text'></input>
+        <br></br>
+        <label htmlFor="calories">Calories ct: </label>
+        <input placeholder='Enter Calorie Count' id='calories' type='number'></input><br></br>
+        <button onClick={addFruit}>Submit</button>
     </div>);
 }

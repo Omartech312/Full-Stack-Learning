@@ -1,7 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import {Card, ExtButton, ModButton, LineButton, Person, DisplayLog, DisplayList, RemovePic, Hooks, OnChange} from './Components.tsx'
+import {Card, ExtButton, ModButton, LineButton, Person, DisplayLog, DisplayList, RemovePic, Hooks, OnChange, 
+  Updater, UpdateObject, UpdateArray, ObjectArray} from './Components.tsx'
 
 createRoot(document.getElementById('root')!).render(
 
@@ -39,6 +40,17 @@ createRoot(document.getElementById('root')!).render(
       <hr></hr>
       <h2>OnChange Event Handler</h2>
       <OnChange />
-      
+      <hr></hr>
+      <h2>updater functions</h2>
+      <Updater />
+      <hr></hr>
+      <h2>Update Objects</h2>
+      <UpdateObject />
+      <hr></hr>
+      <h2>Update Array</h2>
+      <UpdateArray />
+      <hr></hr>
+      <h2>Update Array of Objects</h2>
+      <ObjectArray />
     </>
 )

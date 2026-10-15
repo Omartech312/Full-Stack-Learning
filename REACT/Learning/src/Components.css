@@ -88,3 +88,73 @@
     color: white;
     font-size: 1.5em;
 }
+
+.comparason{
+    background-color: skyblue;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.updaterScore{
+    font-size: 1.6em;
+}
+
+.update{
+    height: 150px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.carSection{
+    background-color: rgb(128, 237, 181);
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.output{
+    font-size: 1.3em;
+    text-shadow: -1px -1px 2px rgb(1, 3, 11), 1px 1px 2px black;
+    color: white;
+}
+
+.carSection input{
+    margin: 3px;
+}
+
+.animalSec{
+    background-color: rgb(213, 194, 252);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.animalHead{
+    font-size: 1.3em;
+}
+
+.animalSec li:hover{
+    cursor: pointer;
+    color: rgb(249, 71, 71);
+    font-size: 1.2em;
+}
+
+.fruits li:hover{
+    cursor: pointer;
+    color: rgb(249, 71, 71);
+    font-size: 1.2em;
+}
+
+.fruits{
+    background-color: rgb(241, 200, 124);
+    padding: 15px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.fruitTitle{
+    font-size: 1.5em;
+}
