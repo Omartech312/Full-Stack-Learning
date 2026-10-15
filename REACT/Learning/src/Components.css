@@ -158,3 +158,12 @@
 .fruitTitle{
     font-size: 1.5em;
 }
+
+.clock{
+    background-color: rgb(202, 200, 200);
+    display: inline-block;
+    border: 6px solid black;
+    padding: 8px;
+    margin-top: 0px;
+    text-shadow: -1px -1px 2px white, 1px 1px 2px white;
+}

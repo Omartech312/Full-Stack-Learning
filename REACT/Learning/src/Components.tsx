@@ -3,7 +3,7 @@ import redButton from './assets/click.jpg';
 import functions from './assets/updater.png';
 import './Components.css';
 import styles from './styles/Button.module.css';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 // using export like this allows for multiple exports instead of one as shown in the default
 export function Card(){
@@ -342,4 +342,29 @@ export function ObjectArray(){
         onChange={e => setCalories(e.target.value)}></input><br></br>
         <button onClick={addFruit}>Submit</button>
     </div>);
+}
+
+// useEffect(function, [dependencies])
+
+// 1 -> useEffect(() => {}) Run after every re-render
+// 2 -> useEffect(() => {}, []) Runs only on mount
+// 3 -> useEffect(() => {}, [value]) Runs on mount + when value changes
+
+// Normals uses: event Listeners, DOM manipulation, subscriptions, Fetching data from APIs and Clean up when a component unmounts
+
+export function Timer() {
+    const [seconds, setSeconds] = useState(0);
+
+    useEffect(() => {
+        // every 1 second interval 
+        const interval = setInterval(() => {
+            // seconds increments by 1
+            setSeconds(prevSeconds => prevSeconds + 1);
+        }, 1000);
+
+
+        return () => clearInterval(interval);
+    }, []);
+
+    return <p className='clock'>Page has been opened for {seconds}s</p>;
 }
